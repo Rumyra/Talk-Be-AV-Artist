@@ -46,7 +46,7 @@ $grey: #bebebe
         </section>
 
         <!--visuals-->
-        <section class="visuals" data-state="visuals">
+        <section data-background-color="#8c4c6f" class="visuals" data-state="visuals">
           <audio src="media/warren.m4a" data-autoplay></audio>
           <aside class="notes">
             <p>DANCE!</p>
@@ -86,21 +86,21 @@ $grey: #bebebe
         </section>
 
         <section data-background-color="#8c4c6f" class="lists">
-          <div>
+          <div class="list-left">
             <ul>
               <h1>Avoid</h1>
-              <li><p>Chat Ops</p></li>
-              <li><p>Orchestration</p></li>
               <li><p>Analytics</p></li>
               <li><p>Operational Excellence</p></li>
+              <li><p>Chat Ops</p></li>
+              <li><p>Orchestration</p></li>
             </ul>
           </div>
-          <div>
+          <div class="list-right">
             <ul>
               <h1>Include</h1>
               <li><p>Duct tape</p></li>
-              <li><p>Bikeshedding</p></li>
               <li><p>Workarounds</p></li>
+              <li><p>Bikeshedding</p></li>
               <li><p>Coffee</p></li>
             </ul>
           </div>
@@ -113,7 +113,7 @@ $grey: #bebebe
           <h1>What is an AV Artist?</h1>
           <p>AV stands for audio visual</p>
           <aside class="notes">
-            <p>A/V stands for audio visual. SO this means audio visual artist. Taking some audio and making visuals from it. Not too much of the audio work, wnother name for this is a VJ.</p>
+            <p>A/V stands for audio visual. SO this means audio visual artist. Taking some audio and making visuals from it OR putting visuals to it. Not too much of the audio work, another name for this is a VJ.</p>
             <p>Who remembers this?...</p>
             <p>Australia different - talk about VJ - add funny gif</p>
           </aside>
@@ -135,139 +135,81 @@ $grey: #bebebe
           <aside class="notes">
             <p>Probably the single most influencial thing for any VJ of my generation</p>
             <p>Visuals that went in time to the music!</p>
-            <p>So what's the first thing we need</p>
+            <p>I am going to go through some of the ways of making these in a browser - and how I came to start building my own software to do so. What's the first thing we need</p>
           </aside>
         </section>
 
-        <section data-background-color="#acc486">
+        <section data-background-color="#acc486" data-background-image="images/audioCode.jpg">
           <h1>Audio</h1>
           <p>Web Audio API</p>
           <aside class="notes">
             <p>Now there's quite a few ways we can get audio in a browser. Especially with the help of the web audio api.</p>
-            <p>We can load them in from a file, from a stream - so your audio or mic. We can load them in from an audio element. Much like you heard at the top of the talk.</p>
-            <!--play warren g & nate dog -->
-            <p>We can create sounds - with an ocisllator. This creates a sound wave.</p>
-            <p>That's what this guy...</p>
+            <p>Create oscillator - saw this earlier - sound wave, pitch, type of wave.</p>
+            <p>Buffer the sound - load it in from a file.</p>
+            <p>Load them from the DOM</p>
+            <p>We can load them in from a file, from a stream - so your audio or mic.</p>
+            <p>These two latter are probably most suitable - easpecially that last one - no line in functionality.</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#acc486" class="visuals" data-state="visuals">
+          <p>Demo with sound</p>
+          <audio src="media/warren.m4a" data-autoplay></audio>
+          <aside class="notes">
+            <p>This is using a sound file</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#acc486" class="visuals" data-state="visuals">
+        <p>Demo with mic</p>
+          <aside class="notes">
+            <p>This is piping in the sound from my microphone</p>
+            <p>So that's great but how did we make that happen?</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#acc486">
+          <h1>Create Visuals</h1>
+          <p>Analyse Sound</p>
+          <aside class="notes">
+            <p>To begin with we need to analyse the sound</p>
           </aside>
         </section>
 
         <!--either do it this way - or with visuals-->
-        <section data-background-color="#acc486" data-background-image="images/ben.jpg">
+        <!-- <section data-background-color="#acc486" data-background-image="images/ben.jpg">
           <h1>Ben Foxall</h1>
           <p>@benjaminbenben</p>
           <aside class="notes">
             <p>Did earlier - he created sound with an oscillator - now I chatted with Ben</p>
           </aside>
-        </section>
-
-        <section data-background-color="#acc486" class="lists">
-          <div>
-            <ul>
-              <h1>Avoid</h1>
-              <li><p class="flash">Chat Ops</p></li>
-              <li><p>Orchestration</p></li>
-              <li><p>Analytics</p></li>
-              <li><p>Operational Excellence</p></li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <h1>Include</h1>
-              <li><p>Duct tape</p></li>
-              <li><p>Bikeshedding</p></li>
-              <li><p>Workarounds</p></li>
-              <li><p>Coffee</p></li>
-            </ul>
-          </div>
-          <aside class="notes">
-            <p>Oh right yes - don't mention chat ops. Ok ok!</p>
-          </aside>
-        </section>
-
-        <section data-background-color="#acc486" data-background-image="images/ben.jpg">
-          <h1>Ben Foxall</h1>
-          <p>@benjaminbenben</p>
-          <aside class="notes">
-            <p>Anyway I was talking to Ben and we did a thing. Whilst he was making music on your devices we were also collecting the data - so I could make music on my device.</p>
-          </aside>
-        </section>
-
-        <section data-background-color="#acc486" data-background-image="images/audioCode.jpg">
-          <h1>Created Sound</h1>
-          <p>Took data & created some oscillators</p>
-          <aside class="notes">
-            <p>Data's great - we took the numbers, music frequencies and times are basically just numbers and I did some coding.</p>
-            <p>Would you like to hear your music track?</p>
-          </aside>
-        </section>
-
-        <section data-background-color="#acc486" data-background-image="images/audioCode.jpg">
-          <h1>Created Sound</h1>
-          <p>Took data & created some oscillators</p>
-          <audio src="" data-autoplay></audio>
-          <aside class="notes">
-            <p>Awesome - that's a great piece of orchestration right there</p>
-          </aside>
-        </section>
-
-        <section data-background-color="#acc486" class="lists">
-          <div>
-            <ul>
-              <h1>Avoid</h1>
-              <li><p><del>Chat Ops</del></p></li>
-              <li><p class="flash">Orchestration</p></li>
-              <li><p>Analytics</p></li>
-              <li><p>Operational Excellence</p></li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <h1>Include</h1>
-              <li><p>Duct tape</p></li>
-              <li><p>Bikeshedding</p></li>
-              <li><p>Workarounds</p></li>
-              <li><p>Coffee</p></li>
-            </ul>
-          </div>
-          <aside class="notes">
-            <p>Urgh - man what ever - moving on...</p>
-          </aside>
-        </section>
+        </section> -->
         
-        <section data-background-color="#ea8d88">
-          <h1>Visuals</h1>
-          <p>Based on sound</p>
-          <aside class="notes">
-            <p>So now comes the fun part - we need to create some visuals based on the sound, to do that we need to analyse the sound</p>
-          </aside>
-        </section>
-
-        <section data-background-color="#ea8d88" class="lists">
-          <div>
+        <section data-background-color="#acc486" class="lists">
+          <div class="list-left">
             <ul>
               <h1>Avoid</h1>
-              <li><p><del>Chat Ops</del></p></li>
-              <li><p><del>Orchestration</del></p></li>
               <li><p class="flash">Analytics</p></li>
               <li><p>Operational Excellence</p></li>
+              <li><p>Chat Ops</p></li>
+              <li><p>Orchestration</p></li>
             </ul>
           </div>
-          <div>
+          <div class="list-right">
             <ul>
               <h1>Include</h1>
               <li><p>Duct tape</p></li>
-              <li><p>Bikeshedding</p></li>
               <li><p>Workarounds</p></li>
+              <li><p>Bikeshedding</p></li>
               <li><p>Coffee</p></li>
             </ul>
           </div>
           <aside class="notes">
-            <p>Seriously! OK right - I am not allowed to say 'Operational Excellence' - otherwise I have completely failed at this talk and omg.</p>
-            <p>I feel like I can do this!</p>
+            <p>What? Oh ok I'm not allowed to talk about analytics - ok well I have a whole talk to go I can still pull this back.</p>
           </aside>
         </section>
 
-        <section data-background-color="#ea8d88" data-background-image="images/analyserCode.jpg">
+        <section data-background-color="#acc486" data-background-image="images/analyserCode.jpg">
           <h1>Analysing sound</h1>
           <p>Web Audio API</p>
           <aside class="notes">
@@ -278,111 +220,278 @@ $grey: #bebebe
           </aside>
         </section>
 
-        <section data-background-color="#ea8d88">
-          <h1>Demo</h1>
-          <p>Tim Pietrusky</p>
+        <section data-background-color="#acc486" data-background-image="images/spectrum.gif">
           <aside class="notes">
-            <p>So now comes the fun part - we need to create some visuals based on the sound, to do that we need to analyse the sound</p>
+            <p>As this is is a bunch of 'i' elements that I change the height on depending on the volume value of the frequency.</p>
           </aside>
         </section>
 
-        <section data-background-color="#ea8d88">
-          <h1>MIDI Controller Stuff Here?</h1>
-          <p>HTML Dom Elements & CSS</p>
+        <section data-background-color="#acc486" data-background-image="images/loopingCode.jpg">
+          <h1>HTML & CSS</h1>
+          <p>Simple</p>
           <aside class="notes">
-            <p>So now comes the fun part - we need to create some visuals based on the sound, to do that we need to analyse the sound</p>
+            <p>So this is our really basic example. Take some repeating DOM elements, loop over them and match them up with an item in our frequencyData array.</p>
+            <p>When the volume for that frequency gets higher, the elements height gets bigger.</p>
+            <p>Now we can expand on just using the DOM</p>
           </aside>
         </section>
 
-        <section data-background-color="#ea8d88">
-          <h1>Simple</h1>
-          <p>HTML Dom Elements & CSS</p>
+        <section data-background-color="#acc486" data-background-image="images/flower.gif">
           <aside class="notes">
-            <p>So now comes the fun part - we need to create some visuals based on the sound, to do that we need to analyse the sound</p>
+            <p>So here I'm using much the same method - just a bunch of HTML elements sitting in the DOM.</p>
+            <p>But we have some fancy new feature which are nice to play with...</p>
           </aside>
         </section>
 
-        <section data-background-color="#ea8d88">
-          <h1>Demo</h1>
-          <p>HTML & CSS</p>
+        <section data-background-color="#acc486" class="lists">
+          <div class="list-right">
+            <ul>
+              <h1>New CSS Features</h1>
+              <li><p>Custom Properties</p></li>
+              <li><p>Blends</p></li>
+              <li><p>Filters</p></li>
+            </ul>
+          </div>
           <aside class="notes">
-            <p>So now comes the fun part - we need to create some visuals based on the sound, to do that we need to analyse the sound</p>
+            <p>We've got Custom Properties, Filters and Blends.</p>
+            <p>All very suited to what we want to do.</p>
           </aside>
         </section>
 
-        <section data-background-color="#ea8d88">
-          <h1>New CSS Features</h1>
-          <p>Custom Properties, filters, blends</p>
+        <!-- make sure code has a workaround-->
+        <section data-background-color="#acc486" data-background-image="images/cusPropCode.jpg">
+          <h1>Custom Properties</h1>
           <aside class="notes">
-            <p>So now comes the fun part - we need to create some visuals based on the sound, to do that we need to analyse the sound</p>
+            <p>Custom properties are basically variables - if you've used pre-processors. You delcare them in the top of your CSS, in a root block, beginning with a double dash.</p>
+            <p>Now the great thing about these, is you can reference them directly in your JavaScript and by doing so they update, realtime, within your CSS.</p>
           </aside>
         </section>
 
-        <section data-background-color="#ea8d88">
-          <h1>Demo</h1>
-          <p>New CSS Thangs</p>
+        <section data-background-color="#acc486" data-background-image="images/filterCode.jpg">
+          <h1>Filters & Blend modes</h1>
           <aside class="notes">
-            <p>So now comes the fun part - we need to create some visuals based on the sound, to do that we need to analyse the sound</p>
+            <p>These are sort of special transparency layer modes for your elements. If you're a user of photoshop you get a similar thing on layers.</p>
+            <p>All the circles of that flower use different blend mode</p>
+            <p>Although not particularly suited to our DOM element examples here, I couldn't go by without mentioning them.</p>
+            <p>They add filters to images, video - that's super important.</p>
+            <p>Things like greyscale, hue shift, inverting</p>
+            <p>You may have noticed the biggest caveat with all these examples - especially that flower.</p>
+            <p>Performance</p>
           </aside>
         </section>
 
-        <section data-background-color="#ea8d88">
-          <h1>d3.js</h1>
-          <p>Mixes data & DOM real nice, also SVGs</p>
+        <section data-background-color="#acc486" class="lists">
+          <div class="list-left">
+            <ul>
+              <h1>Avoid</h1>
+              <li><p><del>Analytics</del></p></li>
+              <li><p class="flash">Operational Excellence</p></li>
+              <li><p>Chat Ops</p></li>
+              <li><p>Orchestration</p></li>
+            </ul>
+          </div>
+          <div class="list-right">
+            <ul>
+              <h1>Include</h1>
+              <li><p>Duct tape</p></li>
+              <li><p>Workarounds</p></li>
+              <li><p>Bikeshedding</p></li>
+              <li><p>Coffee</p></li>
+            </ul>
+          </div>
           <aside class="notes">
-            <p>So now comes the fun part - we need to create some visuals based on the sound, to do that we need to analyse the sound</p>
+            <p>Ha - brilliant - yes thank you talk monitor!</p>
           </aside>
         </section>
 
-        <section data-background-color="#ea8d88">
-          <h1>Demo</h1>
-          <p>d3</p>
+        <section data-background-color="#acc486" data-background-image="images/ben.jpg">
+          <h1>Performance</h1>
+          <p>This is Ben</p>
           <aside class="notes">
-            <p>So now comes the fun part - we need to create some visuals based on the sound, to do that we need to analyse the sound</p>
+            
           </aside>
         </section>
 
-        <section data-background-color="#ea8d88">
+        <section data-background-color="#acc486" class="lists">
+          <div class="list-left">
+            <ul>
+              <h1>Avoid</h1>
+              <li><p><del>Analytics</del></p></li>
+              <li><p><del>Operational Excellence</del></p></li>
+              <li><p class="flash">Chat Ops</p></li>
+              <li><p>Orchestration</p></li>
+            </ul>
+          </div>
+          <div class="list-right">
+            <ul>
+              <h1>Include</h1>
+              <li><p>Duct tape</p></li>
+              <li><p>Workarounds</p></li>
+              <li><p>Bikeshedding</p></li>
+              <li><p>Coffee</p></li>
+            </ul>
+          </div>
+          <aside class="notes">
+            <p>Facepalm - I am not going to make it to the end of this talk am I - right i am not allowed to mention orchestration - that should be pretty easy right?</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#acc486" data-background-image="images/ben.jpg">
+          <h1>Performance</h1>
+          <p>This is Ben</p>
+          <aside class="notes">
+            <p>So yes I was 'talking' to Ben.</p>
+            <p>He was helping me with one particular interactive piece i was doing. Blog post.</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#acc486" class="lists">
+          <div class="list-right">
+            <ul>
+              <h1>d3.js</h1>
+              <li><p>Data</p></li>
+              <li><p>DOM</p></li>
+              <li><p>Maths</p></li>
+              <li><p>SVGs</p></li>
+            </ul>
+          </div>
+          <aside class="notes">
+            <p>Very much in the don't use libraries until I have too.</p>
+            <p>But I started digging around and it had great methods - for creating Dom elements, for simply doing maths on arrays which could come in useful with this frequency data we have.</p>
+            <p>I mean without even trying you get:</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#acc486" data-background-image="images/sunburst.gif">
+          <aside class="notes">
+            <p>So here I'm using much the same method - just a bunch of HTML elements sitting in the DOM.</p>
+            <p>But we have some fancy new feature which are nice to play with...</p>
+            <p>Some of you may be able to spot I'm using SVG's here - we could use anything really. You can attach the data to DOM elements.</p>
+            <p>But now we're at the stage where we sort of 'drawing' within the DOM. We can also do that with canvas</p>
+          </aside>
+        </section>
+
+        <!-- <section data-background-color="#acc486" data-background-image="images/ben.jpg">
+          <h1>Enter, Append, Exit Pattern</h1>
+          <p>Frequency Data 'attaches' to elements</p>
+          <aside class="notes">
+            
+          </aside>
+        </section> -->
+
+        <section data-background-color="#acc486">
+          <h1>Canvas Demo Here</h1>
+          <aside class="notes">
+            <p>Canvas in all honesty is quite a lot like SVG, you're drawing shapes quite a lot.</p>
+            <p>The big difference is you're not chucking loads of stuff at the DOM - even if you are using SVGs, canvas should be better for performance.</p>
+            <p>To be honest I've found it depends on what visual you're looking at doing</p>
+            MAYBE
+            <p>Having tried 3D it's better to stick with faux 3D ?</p>
+          </aside>
+        </section>
+
+        <!-- <section data-background-color="#463c34" data-background-image="images/ben.jpg">
           <h1>Canvas</h1>
-          <p>Mental stuff</p>
+          <p>2D & 3D</p>
           <aside class="notes">
-            <p>So now comes the fun part - we need to create some visuals based on the sound, to do that we need to analyse the sound</p>
+            
+          </aside>
+        </section> -->
+
+        <section data-background-color="#ea8d88">
+          <h1>We Got Visuals</h1>
+          <p>What's Next?</p>
+          <aside class="notes">
+            <p>Right - ok we've covered a few techniques there to make the visuals, and I'm going to skip over the software side for just a moment and head straight into...</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#ea8d88">
+          <h1>Web MIDI API</h1>
+          <p>Controlling</p>
+          <aside class="notes">
+            <p>Now Ben touched on this, but let's have a brief run down</p>
+            <p>MIDI is not sound - the bleepy noises you relate to MIDI are not actually MIDI - that is digital audio.</p>
+            <p>MIDI is a standardised data protocol that electronic instruments all use so musical instrument manufacturers, software manufacturers etc can all make sure equipment etc... that's compatible.</p>
+            <p>The first specs came out in 1983 - huge rise of popularity in electronic instruments in the 70s and indutry experts all got together and made the spec, so all thses instruments could talk to each other and the recording studios they found them in</p>
+            <p>I could do a whole talk *just* about MIDI - I have, a lot, this year. You can find it online in some shape or form.</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#ea8d88" data-background-image="images/keyboard.jpg">
+          <h1>MIDI Instrument</h1>
+          <p>Onboard Audio</p>
+          <aside class="notes">
+            <p>This is a musical keyboard - it's MIDI enabled. This means when you play it, it sends MIDI data, it has a USB port and this is how you receive or send that data.</p>
+            <p>This is a MIDI instrument - the big difference between this and this...</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#ea8d88" data-background-image="images/launchpad.jpg">
+          <h1>MIDI Controller</h1>
+          <p>No Onboard Audio</p>
+          <aside class="notes">
+            <p>This is a MIDI controller - this a Novation Launchpad. It does not have any onboard audio.</p>
+            <p>You would use it to control audio from elsewhere, like software - when you press the buttons it send MIDI data.</p>
+            <p>This is the crux of the Web MIDI API - just picking up on that data and deciding what to do with it.</p>
+            <p>There are loads of MIDI controllers out there</p>
+            <p>I have a few - this is my handbag MIDI controller. It's actually bluetooth, so I don't need a cable to hook it up to my machine so that's pretty sweet.</p>
           </aside>
         </section>
 
         <section data-background-color="#ea8d88">
           <h1>Demo</h1>
-          <p>Canvas</p>
+          <p>MIDI</p>
+          <aside class="notes">
+            <p>There's one small - ok it's massive thing that I didn't put in earlier - that's video.</p>
+            <p>As a visual artist - I'll probably want to use video, but as it's just a video HTML element, it's simple and nothing to write home about</p>
+            <p>So the big idea with having this controller is I can select different video clips, or afore seen animations and actually *mix* between them.</p>
+            <p>I can also attach different effects to buttons and trigger them too.</p> </aside>
+        </section>
+
+        <section data-background-color="#8c4c6f" data-background-image="images/me.jpg">
+          <h1>Is this real?</h1>
+          <p>Or Just a Game</p>
+          <aside class="notes">
+            <p>Um its kinda real - this is me with my portable VJ pack.</p>
+            <p>I have a pocket projector, last year at xmas I took it to the streets of Bristol</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#8c4c6f" data-background-image="">
+          <h1>Screenshot of software?</h1>
+          <aside class="notes">
+            <p>Um its kinda real - this is me with my portable VJ pack.</p>
+            <p>I have a pocket projector, last year at xmas I took it to the streets of Bristol</p>
+          </aside>
+        </section>
+
+
+        <section data-background-color="#8c4c6f" data-background-image="images/me&Tim.jpg">
+          <h1>Gigs</h1>
+          <aside class="notes">
+            <p>This is me and my friend Tim doing a talk/gig at View Source in Berlin</p>
+            <p>And I even got to play a festival over the summer too</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#8c4c6f" data-background-image="images/liveJS.jpg">
+          <h1>{ Live : JS }</h1>
+          <aside class="notes">
+            <p>This is a collective I started - with a few people from all around the world - we're a bunch of musicians and visual artists who create our thangs with JavaScript</p>
+            <p>And we have 3 gigs booked in over the next month. It's really real... all from a pipe dream to re-create a piece of software in a browser.</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#8c4c6f">
+          <h1>Your Turn</h1>
+          <p>Would you like a go?</p>
           <aside class="notes">
             <p>So now comes the fun part - we need to create some visuals based on the sound, to do that we need to analyse the sound</p>
           </aside>
         </section>
 
-        <section data-background-color="#ea8d88">
-          <h1>Canvas</h1>
-          <p>3d?</p>
-          <aside class="notes">
-            <p>So now comes the fun part - we need to create some visuals based on the sound, to do that we need to analyse the sound</p>
-          </aside>
-        </section>
-
-        <section data-background-color="#ea8d88">
-          <h1>Demo</h1>
-          <p>3d?</p>
-          <aside class="notes">
-            <p>So now comes the fun part - we need to create some visuals based on the sound, to do that we need to analyse the sound</p>
-          </aside>
-        </section>
-
-        <section data-background-color="#ea8d88">
-          <h1>Your Data</h1>
-          <p>Yes you!</p>
-          <aside class="notes">
-            <p>So now comes the fun part - we need to create some visuals based on the sound, to do that we need to analyse the sound</p>
-          </aside>
-        </section>
-
-        <section data-background-color="#ea8d88">
+        <section data-background-color="#8c4c6f">
           <h1>Demo</h1>
           <p>Your data</p>
           <aside class="notes">
@@ -390,25 +499,89 @@ $grey: #bebebe
           </aside>
         </section>
 
-        <section data-background-color="#8c4c6f">
-          <h1>Is this real?</h1>
-          <p>Or Just a Game</p>
+        <section data-background-color="#8c4c6f" class="lists">
+          <div class="list-left">
+            <ul>
+              <h1>Avoid</h1>
+              <li><p><del>Analytics</del></p></li>
+              <li><p><del>Operational Excellence</del></p></li>
+              <li><p><del>Chat Ops</del></p></li>
+              <li><p class="flash">Orchestration</p></li>
+            </ul>
+          </div>
+          <div class="list-right">
+            <ul>
+              <h1>Include</h1>
+              <li><p>Duct tape</p></li>
+              <li><p>Workarounds</p></li>
+              <li><p>Bikeshedding</p></li>
+              <li><p>Coffee</p></li>
+            </ul>
+          </div>
           <aside class="notes">
-            <p>Hello ... How are we doing today?</p>
-            <p>I'm Ruth - Normally at this top of the talk people say what they do. It's usually a lot easier for me to show you.</p>
-            <p>I'm here today to...</p>
+            <p>I've actually failed</p>
+            <p>But wait - have I? For the keen eyed among you...</p>
           </aside>
         </section>
 
+        <section data-background-color="#8c4c6f" data-background-image="images/me.jpg">
+          <h1>Duck tape</h1>
+          <aside class="notes">
+            <p>Duck tape</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#8c4c6f" data-background-image="images/ben.jpg">
+          <h1>Bike Shedding</h1>
+          <aside class="notes">
+            <p>Bike Shedding - Thank you Ben</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#8c4c6f" data-background-image="images/cusPropCode.jpg">
+          <h1>Workaround</h1>
+          <aside class="notes">
+            <p>A Workaround</p>
+            <p>And...</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#8c4c6f" class="lists">
+          <div class="list-left">
+            <ul>
+              <h1>Avoid</h1>
+              <li><p><del>Analytics</del></p></li>
+              <li><p><del>Operational Excellence</del></p></li>
+              <li><p><del>Chat Ops</del></p></li>
+              <li><p><del>Orchestration</del></p></li>
+            </ul>
+          </div>
+          <div class="list-right">
+            <ul>
+              <h1>Include</h1>
         <!-- duck tapo, bikeshedding, workaround onboarding-->
+              <li><p>Duct tape ✓</p></li>
+              <li><p>Workarounds ✓</p></li>
+              <li><p>Bikeshedding ✓</p></li>
+              <li><p>Coffee ✓</p></li>
+            </ul>
+          </div>
+          <aside class="notes">
+            <p>I'm drinking coffee!!</p>
+            <p>Most useful talk EVER!</p>
+          </aside>
+        </section>
         
         <section data-background-color="#8c4c6f">
-          <h1>Ruth John&nbsp;&nbsp;|&nbsp;&nbsp;@Rumyra&nbsp;&nbsp;|&nbsp;&nbsp;{ Live : JS }</h1>
+          <h1>Ruth John</h1>
+          <h1>@Rumyra</h1>
+          <h1>{ Live : JS }</h1>
           <p>Thank You Very Much</p>
           <aside class="notes">
-            <p>Hello ... How are we doing today?</p>
-            <p>I'm Ruth - Normally at this top of the talk people say what they do. It's usually a lot easier for me to show you.</p>
-            <p>I'm here today to...</p>
+            <p>Thank you very much, I'm Ruth John</p>
+            <p>All these examples you've seen are on codepen as part of codevember</p>
+            <p>Find me on the internets, follow me - I'm trying to get more followers than a guy named Ben Foxall</p>
+            <p>Go have a relax and I hope you had a lovely conference!</p>
           </aside>
         </section>
 
@@ -417,12 +590,10 @@ $grey: #bebebe
     </div></div>
 
     <div id="vjing">
-      <button id="play-audio">play</button>
-      <audio id="simon" src="public/media/Guilt.mp3" loop></audio>
       <section id="screen"></section>
     </div>
 
-<div id="pusher" data-key="{{PUSH_KEY}}"></div>
+<!-- <div id="pusher" data-key="{{PUSH_KEY}}"></div> -->
 <script src="reveal/plugin/notes/notes.js"></script>
 <script src="reveal/plugin/highlight/highlight.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
@@ -520,9 +691,14 @@ window.addEventListener('keyup', function(e) {
   }
 }, false);
 
-Reveal.addEventListener( 'audioTrack', function() {
-    //play audio track here
+Reveal.addEventListener( 'visuals', function() {
+    
   }, false);
+
+// VJ EXAMPLES
+// spectrum with sound file
+// spectrum with voice
+// interaction with sound file
 
 // // Reveal.addEventListener( 'show-launchpad', function() {
 // //     channel.trigger(

@@ -118,13 +118,13 @@ $selectionColor: #fff;
 
 .reveal {opacity:0.95;}
 // Dif colours
-.slide-background {background-blend-mode: multiply; filter: grayscale(0.3) opacity(0.9);}
+.slide-background {background-blend-mode: multiply; filter: grayscale(0.2) opacity(0.9);}
 
 // specific to av talk
 .reveal .slides .lists {
   ul {list-style:none; margin-left:0px;}
-  div:nth-of-type(1) {float:left;text-align: left;}
-  div:nth-of-type(2) {
+  div.list-left {float:left;text-align: left;}
+  div.list-right {
     h1, ul li {text-align:right;}
   }
   p.flash {animation:flash 1s infinite;}
