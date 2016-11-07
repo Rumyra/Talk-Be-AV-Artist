@@ -1,16 +1,16 @@
-require('dotenv').config();
+// require('dotenv').config();
 
 const express = require('express');
 const bodyParser = require('body-parser');
 const htmling = require('htmling');
-const Pusher = require('pusher');
+// const Pusher = require('pusher');
 
-var pusher = new Pusher({
-  appId: process.env.PUSHID,
-  key: process.env.PUSHKEY,
-  secret: process.env.PUSHSEC
-});
-pusher.port = 443;
+// var pusher = new Pusher({
+//   appId: process.env.PUSHID,
+//   key: process.env.PUSHKEY,
+//   secret: process.env.PUSHSEC
+// });
+// pusher.port = 443;
 
 const app = express();
 
