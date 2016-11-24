@@ -120,6 +120,12 @@ $selectionColor: #fff;
 // Dif colours
 .slide-background {background-blend-mode: multiply; filter: grayscale(0.2) opacity(0.9);}
 
+// speaker notes
+#current-slide {width: 45% !important;}
+#upcoming-slide {width: 55% !important;}
+#speaker-controls {width: 55% !important;}
+
+
 // specific to av talk
 .reveal .slides .lists {
   ul {list-style:none; margin-left:0px;}
