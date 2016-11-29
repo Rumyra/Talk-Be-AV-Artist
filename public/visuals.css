@@ -2,15 +2,17 @@
   width:100vw; height:95vh;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-around;
   align-content: space-around;
 }
 .vis-speakers div {
   border-radius:50% 50% 0px 50%;
+  width:10vw; height:10vw; margin:0.5vw 1.2vw;
 }
 .vis-speakers img {
   display: block;
-  width:21vw; height:21vw;
+  width:10vw; height:10vw;
   mix-blend-mode: overlay;
   border-radius:50% 50% 0px 50%;
 }
@@ -23,6 +25,10 @@
   display: inline-block;
   width: 20px; margin:0px 4px -20vh;
 }
+.vis-spectrum img {
+  height:100%; width:auto;
+}
+
 
 #two-screens {position: relative; width:100vw; height:100vh;}
 #two-screens section {position:absolute; top:0px; left:0px;}
