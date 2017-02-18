@@ -11,7 +11,7 @@ if (audioContext) {
 
 // variables
 var analyserNode,
-    frequencyData = new Uint8Array(64);
+    frequencyData = new Uint8Array(128);
 const screen = document.querySelector('#screen');
 console.log(screen);
     
@@ -19,16 +19,25 @@ console.log(screen);
 // create an audio API analyser node and connect to source
 function createAnalyserNode(audioSource) {
   analyserNode = audioAPI.createAnalyser();
-  analyserNode.fftSize = 128;
+  analyserNode.fftSize = 256;
   audioSource.connect(analyserNode);
 }
 
-
+var newFreq = new Uint8Array(16), arCount = 0;
 function animate() {
   requestAnimationFrame(animate);
   analyserNode.getByteFrequencyData(frequencyData);
+  frequencyData.forEach(newData);
   animateDom();
 }
+
+
+function newData(ele,ind,arr) {
+  if (ind%8 === 0) {
+    newFreq[arCount] = ele;
+    arCount++;
+  }
+};
 
 // getUserMedia success callback -> pipe audio stream into audio API
 var gotStream = function(stream) {

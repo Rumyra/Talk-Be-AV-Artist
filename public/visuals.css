@@ -1,3 +1,7 @@
+:root {
+  --level: 1;
+}
+
 .vis-speakers {
   width:100vw; height:95vh;
   display: flex;
@@ -5,16 +9,14 @@
   justify-content: space-around;
   align-content: space-around;
 }
-.vis-speakers div {
-  border-radius:50% 50% 0px 50%;
-}
+.vis-speakers div {border-radius: 2px;}
 .vis-speakers img {
   display: block;
-  width:21vw; height:21vw;
+  width:20vw; height:20vw;
   mix-blend-mode: overlay;
-  border-radius:50% 50% 0px 50%;
+  border-radius:2px;
 }
-
+/*-----------------*/
 .vis-spectrum {
   width:100vw; height:95vh;
   line-height:95vh; text-align:center;
@@ -23,6 +25,134 @@
   display: inline-block;
   width: 20px; margin:0px 4px -20vh;
 }
+/*-----------------*/
+.vis-bridget-squares {
+  width: 100vw; height: 100vh;
+  background: black;
+  display: flex;
+  align-items: stretch;
+}
+.vis-bridget-squares section {
+  background-color: white;
+  background-image: linear-gradient(to bottom, black 50%, white 50%);
+  background-size: 20vh 20vh;
+  flex:1;
+}
+.vis-bridget-squares section:nth-of-type(2n) {
+  background-color: black;
+  background-position: 0 10vh;
+}
+/*-----------------*/
+.vis-bridget-tri {
+  width: 96vw; height: 120vh;
+  overflow: hidden;
+  transform: translate(2vw, -10vw);
+}
+.vis-bridget-tri b {
+  display: block; float: left;
+  height:13vw; width:16vw;
+  position: relative;
+  background: transparent;
+  opacity: 0;
+}
+.vis-bridget-tri b:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-top-color: #fff;
+  border-width: 13vw 8vw 0 8vw;
+  border-radius: 0vw;
+  margin-left: -16vw;
+}
+.vis-bridget-tri b:nth-of-type(n+5) {transform: translateX(16vw);}
+.vis-bridget-tri b:nth-of-type(n+9) {transform: translateX(0vw);}
+.vis-bridget-tri b:nth-of-type(n+13) {transform: translateX(8vw);}
+.vis-bridget-tri b:nth-of-type(n+14) {transform: translateY(13vw);}
+.vis-bridget-tri b:nth-of-type(16) {transform: translateY(0vw);}
+
+
+/*-----------------*/
+.quarter div {
+  height: 20px;
+  opacity: var(--level);
+}
+.quarter div:nth-of-type(1) {
+  width: 50px;
+  background-color: rgba(214, 153, 92, 0.7);
+  border: 1px solid rgba(214, 153, 92, 0.9);
+  animation: moveDivs 400ms linear 200ms alternate infinite;
+}
+.quarter div:nth-of-type(2) {
+  width: 100px;
+  background-color: rgba(214, 214, 92, 0.7);
+  border: 1px solid rgba(214, 214, 92, 0.9);
+  animation: moveDivs 800ms linear 400ms alternate infinite;
+}
+.quarter div:nth-of-type(3) {
+  width: 150px;
+  background-color: rgba(153, 214, 92, 0.7);
+  border: 1px solid rgba(153, 214, 92, 0.9);
+  animation: moveDivs 1200ms linear 600ms alternate infinite;
+}
+.quarter div:nth-of-type(4) {
+  width: 200px;
+  background-color: rgba(92, 214, 92, 0.7);
+  border: 1px solid rgba(92, 214, 92, 0.9);
+  animation: moveDivs 1600ms linear 800ms alternate infinite;
+}
+.quarter div:nth-of-type(5) {
+  width: 250px;
+  background-color: rgba(92, 214, 153, 0.7);
+  border: 1px solid rgba(92, 214, 153, 0.9);
+  animation: moveDivs 2000ms linear 1000ms alternate infinite;
+}
+.quarter div:nth-of-type(6) {
+  width: 300px;
+  background-color: rgba(92, 214, 214, 0.7);
+  border: 1px solid rgba(92, 214, 214, 0.9);
+  animation: moveDivs 2400ms linear 1200ms alternate infinite;
+}
+.quarter div:nth-of-type(7) {
+  width: 350px;
+  background-color: rgba(92, 153, 214, 0.7);
+  border: 1px solid rgba(92, 153, 214, 0.9);
+  animation: moveDivs 2800ms linear 1400ms alternate infinite;
+}
+.quarter div:nth-of-type(8) {
+  width: 400px;
+  background-color: rgba(92, 92, 214, 0.7);
+  border: 1px solid rgba(92, 92, 214, 0.9);
+  animation: moveDivs 3200ms linear 1600ms alternate infinite;
+}
+
+@keyframes moveDivs {
+  0% {
+    transform: translateY(0vh);
+  }
+  100% {
+    transform: translateY(50vh);
+  }
+}
+
+/*-----------------*/
+.quarter {
+  overflow: hidden;
+}
+.quarter img {
+  height: 50vh;
+  width: auto;
+}
+
+/*-----------------*/
+.vis-spots-blend circle {mix-blend-mode: screen;}
+
+
+/*-----------------*/
 
 #two-screens {position: relative; width:100vw; height:100vh;}
 #two-screens section {position:absolute; top:0px; left:0px;}
