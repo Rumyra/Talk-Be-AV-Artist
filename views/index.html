@@ -62,7 +62,7 @@ $grey: #bebebe
 
         <!--visuals-->
         <section data-background-color="#8c4c6f" data-state="vis_speakers">
-          <audio src="media/warren.m4a" data-autoplay></audio>
+          <audio src="media/warren.m4a" data-autoplay id="warren"></audio>
           <aside class="notes">
             <p>DANCE!</p>
           </aside>
@@ -72,7 +72,7 @@ $grey: #bebebe
           <h1>Ruth John&nbsp;&nbsp;|&nbsp;&nbsp;@Rumyra</h1>
           <p>Hello</p>
           <aside class="notes">
-            <p>Hello JSconfAU ... How are we doing today?</p>
+            <p>Hey.. All Day Hey ... How are we doing today?</p>
             <p>I'm Ruth - Normally at this top of the talk people say what they do. It's usually a lot easier for me to show you.</p>
             <p>I'm here today to...</p>
           </aside>
@@ -83,8 +83,7 @@ $grey: #bebebe
           <p>Sorry you what now?</p>
           <aside class="notes">
             <p>...talk to you about how to be a web AV artist</p>
-            <p>Talk was voted in - super cool - but...</p>
-            <p>So I'll be honest with you - i struggled with the practicality of this talk. Who here even knows what an A/V artist is?</p>
+            <p>So I'll be honest with you - i struggle with the practicality of this talk. Who here even knows what an A/V artist is?</p>
             <p>Right? Let alone, who needs to know how to be one! I fear I am not going to give you any practical advise for you to take away - yes go back to your jobs tomorrow and code some AV - right there in your web page slash application...</p>
           </aside>
         </section>
@@ -94,10 +93,9 @@ $grey: #bebebe
           <p>Source: @ThePracticalDev</p>
           
           <aside class="notes">
-            <p>Who saw this venn diagram going round the internet a couple of weeks ago?</p>
-            <p>OK so I'm not doing the keynote but I am a CTO of my own company of which I am also the director, and sole employee, and sole share holder of one share.</p>
-            <p>Really tho I was having talk anxiety, I mean there's nothing really useful in this talk.</p>
-            <p>So let's use this as a guide - right things I must say for this to be useful are on the right - so that's duct tape, workarounds, coffee and bikeshedding.</p><p>Thing's I have to avoid are on the left - orchestration, operational excellence, analytics and chat ops.</p>
+            <p>This was a venn diagram on the internets about 6 months ago</p>
+            <p>It's about what speakers talk about and what attendees want to hear about so I took this very literally</p>
+            <p>So I made two lists - right things I must say for this to be useful are on the right - so that's duct tape, workarounds, coffee and bikeshedding.</p><p>Thing's I have to avoid are on the left - orchestration, operational excellence, analytics and chat ops.</p>
           </aside>
         </section>
 
@@ -129,9 +127,9 @@ $grey: #bebebe
           <h1>What is an AV Artist?</h1>
           <p>AV stands for audio visual</p>
           <aside class="notes">
+            <p>So what does AV stand for?</p>
             <p>A/V stands for audio visual. SO this means audio visual artist. Taking some audio and making visuals from it OR putting visuals to it. Not too much of the audio work, another name for this is a VJ.</p>
             <p>Who remembers this?...</p>
-            <p>Australia different - talk about VJ - add funny gif</p>
           </aside>
         </section>
 
@@ -160,10 +158,10 @@ $grey: #bebebe
           <p>Web Audio API</p>
           <aside class="notes">
             <p>Now there's quite a few ways we can get audio in a browser. Especially with the help of the web audio api.</p>
-            <p>Create oscillator - saw this earlier - sound wave, pitch, type of wave.</p>
-            <p>Buffer the sound - load it in from a file.</p>
+            <p>Create oscillator - saw this earlier - sound wave, pitch, type of wave. Create your own wave shape</p>
             <p>Load them from the DOM</p>
             <p>Stream - so your audio or mic.</p>
+            <p>Buffer the sound - load it in from a file.</p>
             <p>These two latter are probably most suitable - easpecially that last one - no line in functionality.</p>
           </aside>
         </section>
@@ -223,7 +221,7 @@ $grey: #bebebe
             </ul>
           </div>
           <aside class="notes">
-            <p>What? Oh ok I'm not allowed to talk about analytics - ok well I have a whole talk to go I can still pull this back.</p>
+            <p>What? OK it appears we have a talk bot, absolutely willing to make sure this is a resonable talk. Of which I am failing. Oh ok I'm not allowed to talk about analytics - ok well I have a whole talk to go I can still pull this back.</p>
           </aside>
         </section>
 
@@ -247,6 +245,16 @@ $grey: #bebebe
           </aside>
         </section>
 
+        <section data-background-color="#acc486" data-background-image="images/freqArray.jpg" data-state="no-visuals">
+          <h1>Array frequency velocities</h1>
+          <aside class="notes">
+            <p>And we get this array of freq volumes returned</p>
+            <p>0-20k hertz</p>
+            <p>Frequencies human ear</p>
+            <p>Analyser gives back array - bigger array better resolution</p>
+          </aside>
+        </section>
+
         <section data-background-color="#acc486" data-state="vis_spectrum_sound">
           <aside class="notes">
             <p>As this is is a bunch of 'i' elements that I change the height on depending on the volume value of the frequency.</p>
@@ -259,7 +267,7 @@ $grey: #bebebe
           <aside class="notes">
             <p>So this is our really basic example. Take some repeating DOM elements, loop over them and match them up with an item in our frequencyData array.</p>
             <p>When the volume for that frequency gets higher, the elements height gets bigger.</p>
-            <p>Just using the DOM - there's plenty we can do with that</p>
+            <p>Just using the DOM - there's plenty we can do with that - EXPERIMENTS</p>
           </aside>
         </section>
 
@@ -355,13 +363,6 @@ $grey: #bebebe
           </aside>
         </section>
 
-        <section data-background-color="#acc486" data-background-image="images/flower.gif" data-state="no-visuals">
-          <aside class="notes">
-            <p>So here I'm using much the same method - just a bunch of HTML elements sitting in the DOM.</p>
-            <p>But we have some fancy new feature which are nice to play with...</p>
-          </aside>
-        </section>
-
         <!-- make sure code has a workaround-->
         <section data-background-color="#acc486" data-background-image="images/cusPropCode.jpg" data-state="no-visuals">
           <h1>Custom Properties</h1>
@@ -370,6 +371,14 @@ $grey: #bebebe
             <p>Now the great thing about these, is you can reference them directly in your JavaScript and by doing so they update, realtime, within your CSS.</p>
             <p>You may have noticed the biggest caveat with all these examples - especially that flower.</p>
             <p>Performance</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#acc486" data-background-image="images/flower.gif" data-state="no-visuals">
+          <aside class="notes">
+            <p>So here I'm using much the same method - just a bunch of HTML elements sitting in the DOM.</p>
+            <p>Put it all together</p>
+            <p>You may notice it's a bit janky. it doesn't really like operating...</p>
           </aside>
         </section>
 
@@ -394,7 +403,13 @@ $grey: #bebebe
             </ul>
           </div>
           <aside class="notes">
-            <p>Ha - brilliant - yes thank you talk monitor!</p>
+            <p>Ha - brilliant - yes thank you talk bot!</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#acc486" data-background-image="images/flower.gif" data-state="no-visuals">
+          <aside class="notes">
+            <p>So I was thinking about performance...</p>
           </aside>
         </section>
 
@@ -402,7 +417,7 @@ $grey: #bebebe
           <h1>Performance</h1>
           <p>This is Ben</p>
           <aside class="notes">
-            <p>This is Ben Foxall - you may know him - he does talks with phones.</p>
+            <p>This is my friend Ben - he's pretty good at stuff. I recommend talking to your friends if you don't their cool.</p>
             <p>So I was chatting to Ben</p>
           </aside>
         </section>
@@ -454,7 +469,7 @@ $grey: #bebebe
           <aside class="notes">
             <p>Very much in the don't use libraries until I have too.</p>
             <p>But I started digging around and it had great methods - for creating Dom elements, for simply doing maths on arrays which could come in useful with this frequency data we have.</p>
-            <p>I mean without even trying you get:</p>
+            <p>THus began my next set of experiments.</p>
           </aside>
         </section>
 
@@ -488,11 +503,11 @@ $grey: #bebebe
           </aside>
         </section>
 
-        <section data-background-color="#acc486" data-state="vis_chart_better">
+        <!-- <section data-background-color="#acc486" data-state="vis_chart_better">
           <aside class="notes">
             <p>Let's take this vis</p>
           </aside>
-        </section>
+        </section> -->
 
         <section data-background-color="#acc486" data-state="no-visuals">
           <h1>Analysis</h1>
@@ -510,6 +525,72 @@ $grey: #bebebe
           </aside>
         </section> -->
 
+        <section data-background-color="#acc486" data-background-image="images/freqArray.jpg" data-state="no-visuals" data-transition="none">
+          <h1>Array frequency velocities</h1>
+          <aside class="notes">
+            <p>Let's for a second go back to our array of frequency velocities.</p>
+            <p>It goes all the way up to 20kHz - this is pretty - in fact it's really high.</p>
+            <p>A musical keyboard for instance goes about this high.</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#acc486" data-background-image="images/freqKey.jpg" >
+          <h1>Keyboard frequencies</h1>
+          <aside class="notes">
+            <p>Not that high</p>
+            <p>The other thing to note is we're splitting these frequencies up in equal measures</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#acc486" data-background-image="images/keyNotes.png">
+          <h1>Note gaps</h1>
+          <p>Not equal</p>
+          <aside class="notes">
+            <p>These are all the note A on the keyboard - they are octave jumps - all the same harmoniously</p>
+            <p>440 in the middle, 220 below and 880 above. Gap gets bigger.</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#acc486" data-background-image="images/partArr.jpg" data-transition="none">
+          <h1>Split Array</h1>
+          <aside class="notes">
+            <p>So we can just take this part of the array, and spread it out...</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#acc486" data-background-image="images/arrSpread.jpg" data-transition="none">
+          <h1>Spread Array</h1>
+          <aside class="notes">
+            <p>So we can just take this part of the array, and spread it out...</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#acc486" data-background-image="images/adjustFunc.jpg" data-state="no-visuals">
+          <h1>Magic Function</h1>
+          <aside class="notes">
+            <p>Like this</p>
+            <p>Simple</p>
+            <p>No granted, this actually wasn't in anyway simple. This is my third iteration of this function and I'm always optimising it in one way or another.</p>
+            <p>And to proove it works...</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#acc486" data-state="vis_chart">
+        <audio src="media/screwUp.mp3" data-autoplay></audio>
+          <aside class="notes">
+            <p>This is a vis using the data before I manipulate it - straight form the audio api</p>
+            <p>Can you see the top right is heavy - this is low to high, so this portion of the array is getting all the data</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#acc486" data-state="vis_chart_better">
+        <audio src="media/screwUp.mp3" data-autoplay></audio>
+          <aside class="notes">
+            <p>And this is the data after I run the magical function.</p>
+            <p>See how much more spread out this is.</p>
+            <p>Now I do realise this isn't a perfect science - it's not suppose to be. I'm making this betterer for visuals. And actually this makes it easier for me to detect low, mid and high frequencies.</p>
+          </aside>
+        </section>
         
 
         <section data-background-color="#ea8d88" data-background-image="images/codevember.jpg" data-state="no-visuals">
@@ -611,7 +692,7 @@ $grey: #bebebe
 
         <section data-background-color="#8c4c6f" data-background-image="images/liveJS.jpg" data-state="no-visuals">
           <h1>{ Live : JS }</h1>
-          <p>@LiveJS_Network</p>
+          <h2>livejs.network</h2>
           <aside class="notes">
             <p>This is a collective I started - with a few people from all around the world - we're a bunch of musicians and visual artists who create our thangs with JavaScript</p>
             <p>And we have 3 gigs booked in over the next month. It's really real... all from a pipe dream to re-create a piece of software in a browser.</p>
@@ -630,6 +711,7 @@ $grey: #bebebe
           <h1>Github</h1>
           <aside class="notes">
             <p>We even have a github org so it has to be real</p>
+            <p>Really it's great for us to give back to the community.</p>
             <p>Why code my own software - there's native? Because code. I'm not the only one!</p>
             <p>Two software - hacky - real will sit here</p>
             <p>Demo tonight</p>
@@ -685,7 +767,7 @@ $grey: #bebebe
           </aside>
         </section>
 
-        <section data-background-color="#8c4c6f" data-background-image="images/cusPropCode.jpg" data-state="no-visuals">
+        <section data-background-color="#8c4c6f" data-background-image="images/adjustFunc.jpg" data-state="no-visuals">
           <audio src="media/XPtada.m4a" data-autoplay></audio>
           <h1>Workaround</h1>
           <aside class="notes">
@@ -724,7 +806,6 @@ $grey: #bebebe
         <section data-background-color="#8c4c6f" data-state="no-visuals">
           <h1>Ruth John</h1>
           <h1>@Rumyra</h1>
-          <h1>@LiveJS_Network</h1>
           <p>Thank You Very Much</p>
           <aside class="notes">
             <p>Thank you very much, I'm Ruth John</p>
@@ -746,549 +827,7 @@ $grey: #bebebe
 
 <script src="scripts/audioVisual.js"></script>
 
-<script type="text/javascript">
-// Reveal~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Reveal.initialize({
-
-  // The "normal" size of the presentation, aspect ratio will be preserved
-  // when the presentation is scaled to fit different resolutions. Can be
-  // specified using percentage units.
-  width: 1024,
-  height: 768,
-
-  // Factor of the display size that should remain empty around the content
-  margin: 0.1,
-
-  // Bounds for smallest/largest possible scale to apply to content
-  minScale: 0.2,
-  maxScale: 1.5,
-
-  center: false,
-
-  // Display controls in the bottom right corner
-  controls: false,
-
-  // Display a presentation progress bar
-  progress: false,
-
-  // Display the page number of the current slide
-  slideNumber: false,
-
-  // Push each slide change to the browser history
-  history: true,
-
-  // Enable keyboard shortcuts for navigation
-  keyboard: true,
-
-  // Transition style
-  transition: 'fade', // none/fade/slide/convex/concave/zoom
-
-  // Transition speed
-  transitionSpeed: 'default', // default/fast/slow
-
-  // Transition style for full page slide backgrounds
-  backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
-
-  // Number of slides away from the current that are visible
-  viewDistance: 2,
-
-  // Parallax background image
-  parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
-
-  // Parallax background size
-  parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
-
-  // Amount to move parallax background (horizontal and vertical) on slide change
-  // Number, e.g. 100
-  parallaxBackgroundHorizontal: '',
-  parallaxBackgroundVertical: ''
-
-});
-
-
-window.addEventListener('keyup', function(e) {
-  if (e.keyCode === 86) {
-    document.getElementById('akai').play();
-  }
-}, false);
-
-// set which animation to show
-let currentAnimation = 'vis_speakers',
-  allEls,
-  totalEls,
-  animateDom = function() {},
-  useMic = false;
-
-// spectrum
-Reveal.addEventListener( 'vis_speakers', function(ev) {
-  screen.style.display = 'block';
-  currentAnimation = ev.type;
-
-  screen.innerHTML = '<section class="vis-speakers"><div><img src="images/speakersAU/01.jpg" /></div><div><img src="images/speakersAU/02.jpg" /></div><div><img src="images/speakersAU/03.jpg" /></div><div><img src="images/speakersAU/04.jpg" /></div><div><img src="images/speakersAU/05.jpg" /></div><div><img src="images/speakersAU/06.jpg" /></div><div><img src="images/speakersAU/07.jpg" /></div><div><img src="images/speakersAU/08.jpg" /></div><div><img src="images/speakersAU/09.jpg" /></div><div><img src="images/speakersAU/10.jpg" /></div></section>';
-  allEls = document.querySelectorAll('#screen div');
-  totalEls = allEls.length;
-
-  animateDom = function() {
-    for (let i=0; i<totalEls; i++) {
-      //style i
-      allEls[i].style.backgroundColor = 'hsla('+i*40+',30%,50%,1)';
-
-      var freqOp = (frequencyData[i*4]/255)+0.1;
-      allEls[i].style.opacity = freqOp;
-      allEls[i].style.filter = 'contrast('+(freqOp+1)+')';
-    }
-  }
-}, false);
-
-// spectrum
-Reveal.addEventListener( 'vis_spectrum_sound', function(ev) {
-  screen.style.display = 'block';
-  currentAnimation = ev.type;
-
-  screen.innerHTML = '<section class="vis-spectrum"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></section>';
-  allEls = document.querySelectorAll('#screen i');
-  totalEls = allEls.length;
-
-  animateDom = function() {
-    for (let i=0; i<totalEls; i++) {
-      //style i
-      allEls[i].style.backgroundColor = 'hsla('+i*20+',50%,50%,0.9)';
-      allEls[i].style.border = '1px solid hsla('+i*20+',50%,50%,1)';
-
-      var freqVol = frequencyData[i*3]/4;
-      allEls[i].style.height = freqVol+'vh';
-    }
-  }
-}, false);
-
-// spectrum
-Reveal.addEventListener( 'vis_vjing', function(ev) {
-  screen.style.display = 'block';
-  currentAnimation = ev.type;
-
-  screen.innerHTML = '<div id="two-screens"><section class="vis-spectrum"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></section><section class="vis-speakers"><div><img src="images/speakersAU/01.jpg" /></div><div><img src="images/speakersAU/02.jpg" /></div><div><img src="images/speakersAU/03.jpg" /></div><div><img src="images/speakersAU/04.jpg" /></div><div><img src="images/speakersAU/05.jpg" /></div><div><img src="images/speakersAU/06.jpg" /></div><div><img src="images/speakersAU/07.jpg" /></div><div><img src="images/speakersAU/08.jpg" /></div><div><img src="images/speakersAU/09.jpg" /></div><div><img src="images/speakersAU/10.jpg" /></div></section></div>';
-  var allElsOne = document.querySelectorAll('.vis-spectrum i');
-  var totalElsOne = allElsOne.length;
-  var allElsTwo = document.querySelectorAll('.vis-speakers div');
-  var totalElsTwo = allElsTwo.length;
-  var screenOne = document.querySelector('.vis-spectrum');
-  var screenTwo = document.querySelector('.vis-speakers');
-  screenTwo.style.opacity = 0;
-
-  animateDom = function() {
-    for (let i=0; i<totalElsOne; i++) {
-      //style i
-      allElsOne[i].style.backgroundColor = 'hsla('+i*20+',50%,50%,0.9)';
-      allElsOne[i].style.border = '1px solid hsla('+i*20+',50%,50%,1)';
-
-      var freqVol = frequencyData[i*3]/4;
-      allElsOne[i].style.height = freqVol+'vh';
-    }
-    for (let i=0; i<totalElsTwo; i++) {
-      //style i
-      allElsTwo[i].style.backgroundColor = 'hsla('+i*40+',30%,50%,1)';
-
-      var freqOp = (frequencyData[i*4]/255)+0.1;
-      allElsTwo[i].style.opacity = freqOp;
-      allElsTwo[i].style.filter = 'contrast('+(freqOp+1)+')';
-    }
-
-    if (data[0] === 176) {
-      screenTwo.style.opacity = (data[2]/127);
-      screenOne.style.opacity = 1-(data[2]/127);
-    }
-
-    if (data[0] === 144 && data[1] === 4) {
-      if (data[2] === 64) {
-        screenOne.style.background = 'white';
-        screenTwo.style.background = 'white';
-      } else if (data[2] === 0) {
-        screenOne.style.background = 'transparent';
-        screenTwo.style.background = 'transparent';
-      }
-    }
-  }
-}, false);
-
-// bridget squares
-Reveal.addEventListener( 'vis_bridget_squares', function(ev) {
-  screen.style.display = 'block';
-  currentAnimation = ev.type;
-
-  screen.innerHTML = '<section class="vis-bridget-squares"><section></section><section></section><section></section><section></section><section></section><section></section><section></section><section></section><section></section><section></section><section></section><section></section><section></section><section></section><section></section><section></section></section>';
-  allEls = document.querySelectorAll('.vis-bridget-squares section');
-  totalEls = allEls.length;
-
-  animateDom = function() {
-    for (let i=0; i<totalEls; i++) {
-
-      var freqVol = frequencyData[i*2];
-
-      if (freqVol <= 255 && freqVol > 150) {
-        allEls[i].style.flex = 2;
-      } else if (freqVol <= 150 && freqVol > 90) {
-        allEls[i].style.flex = 1.5;
-      } else if (freqVol <= 90 && freqVol > 40) {
-        allEls[i].style.flex = 0.5;
-      } else { //50 or below
-        allEls[i].style.flex = 1;      
-      }
-    }
-  }
-}, false);
-
-// bridget squares
-Reveal.addEventListener( 'vis_bridget_tri', function(ev) {
-  screen.style.display = 'block';
-  currentAnimation = ev.type;
-
-  screen.innerHTML = '<section class="vis-bridget-tri"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></section>';
-  allEls = document.querySelectorAll('.vis-bridget-tri b');
-  totalEls = allEls.length;
-
-  animateDom = function() {
-    for (let i=0; i<totalEls; i++) {
-      var freqVol = frequencyData[i*2];
-
-      if (freqVol > 50) {
-        allEls[i].style.opacity = freqVol/150;
-      } else {
-        allEls[i].style.opacity = 0;
-      }
-    }
-  }
-}, false);
-
-function createQuarter(fragment, screen) {
-
-  // create a new 'quarter', set styles
-  let quarterEl = document.createElement('div');
-  quarterEl.classList = 'quarter';
-  quarterEl.style.width = '50vw';
-  quarterEl.style.height = '50vh';
-  quarterEl.style.overflow = 'hidden';
-
-  // duplicate original fragment to be mirrored in quarter
-  let newHtml = fragment.outerHTML+fragment.outerHTML;
-  quarterEl.innerHTML = newHtml;
-  screen.removeChild(fragment);
-  screen.appendChild(quarterEl);
-
-  // rotate and set styles on new fragments within quarter
-  let newFragments = document.querySelectorAll('.quarter '+fragment.localName);
-  for (let i = newFragments.length - 1; i >= 0; i--) {
-    newFragments[i].style.width = '50vw';
-    newFragments[i].style.height = '50vh';
-  }
-  newFragments[1].style.transform = 'translateY(-50vh) rotateZ(180deg)';
-
-  // rotate quarter
-  for (var i=3-1; i>=0; i--) {
-    let nextQuarter = quarterEl.cloneNode(true);
-    screen.appendChild(nextQuarter);
-  }
-  const allQuarters = document.querySelectorAll('.quarter');
-  for (var i=allQuarters.length-1; i>0; i--) {
-    allQuarters[i].style.transform = 'translateY('+i*-50+'vh) rotateZ('+i*90+'deg)';
-    allQuarters[i].style.transformOrigin = 'right bottom';
-  }
-  
-}
-
-// symmetry
-Reveal.addEventListener( 'vis_symmetry', function(ev) {
-  screen.style.display = 'block';
-  currentAnimation = ev.type;
-
-  screen.innerHTML = '<section class="vis-symmetry"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></section>';
-  
-  // set which element to be symmetry'd
-  const fragmentedSection = document.querySelector('.vis-symmetry');
-
-  createQuarter(fragmentedSection, screen);
-
-  animateDom = function() {
-    document.documentElement.style.setProperty('--level', frequencyData[5]/220);
-  }
-}, false);
-// symmetry gif
-Reveal.addEventListener( 'vis_symmetry_gif', function(ev) {
-  screen.style.display = 'block';
-  currentAnimation = ev.type;
-
-  screen.innerHTML = '<section class="vis-symmetry-gif"><img src="images/explode.gif" /></section>';
-  
-  // set which element to be symmetry'd
-  const fragmentedSection = document.querySelector('.vis-symmetry-gif');
-
-  createQuarter(fragmentedSection, screen);
-
-  animateDom = function() {
-    document.documentElement.style.setProperty('--level', frequencyData[5]/220);
-  }
-}, false);
-
-// sunburst
-Reveal.addEventListener( 'vis_sunburst', function(ev) {
-  screen.style.display = 'block';
-  currentAnimation = ev.type;
-
-  screen.innerHTML = '<section class="vis-sunburst"><svg></svg></section>';
-  
-  var width = window.innerWidth,
-    height = window.innerHeight,
-    radius = Math.min(width, height) / 2;
-
-  var svg = d3.select("svg")
-    .append("g")
-    .attr("transform", "translate(" + width / 2 + "," + height * .52 + ")");
-  var g = d3.select("g");
-  var arcs = g.selectAll("path");
-
-  var arc = d3.svg.arc()
-    .startAngle(function(d, i) { return (i/8)*Math.PI; })
-    .endAngle(function(d, i) { return ((i+1)/8)*Math.PI; })
-    .innerRadius(function(d, i) { return radius/3; })
-    .outerRadius(function(d, i) { return d*2; });
-
-  animateDom = function() {
-    arcs = arcs.data(frequencyData.slice(0,32));
-
-    arcs
-      .enter().append("path")
-      .style("stroke", "#fff");
-
-    arcs
-      .attr("d", arc)
-      .style("fill", function(d,i) { return 'hsla('+i*6+',60%,'+Math.floor(d/2.5)+'%,'+d/255+')'; })
-      .exit().remove();
-  }
-}, false);
-
-// spiral
-Reveal.addEventListener( 'vis_spiral', function(ev) {
-  screen.style.display = 'block';
-  currentAnimation = ev.type;
-
-  screen.innerHTML = '<section class="vis-spiral"><svg></svg></section>';
-  
-  var width = window.innerWidth,
-    height = window.innerHeight,
-    radius = Math.min(width, height) / 2;
-
-  var svg = d3.select("svg")
-    .append("g")
-    .attr("transform", "translate(" + width / 2 + "," + height * .52 + ")");
-  var g = d3.select("g");
-  var arcs = g.selectAll("path");
-
-  var arc = d3.svg.arc()
-    .startAngle(function(d, i) { return (i/8)*Math.PI; })
-    .endAngle(function(d, i) { return ((i+1)/8)*Math.PI; })
-    .innerRadius(function(d, i) { return 0; })
-    .outerRadius(function(d, i) { return (i*15)+(d); });
-
-  animateDom = function() {
-    arcs = arcs.data(frequencyData.slice(0,32));
-
-    arcs
-      .enter().append("path")
-      .style("stroke", "#222");
-
-    arcs
-      .attr("d", arc)
-      .style("fill", function(d,i) { return 'hsla('+i*6+',60%,'+Math.floor(d/2.5)+'%,'+d/255+')'; })
-      .exit().remove();
-  }
-}, false);
-
-// spots
-Reveal.addEventListener( 'vis_spots', function(ev) {
-  screen.style.display = 'block';
-  currentAnimation = ev.type;
-
-  screen.innerHTML = '<section class="vis-spots"><svg></svg></section>';
-  
-  var svg = d3.select('svg');
-  var circle = svg.selectAll('circle'),
-    line = svg.selectAll('line'),
-    radius = window.innerHeight/2.5-50;
-
-  animateDom = function() {
-    circle = circle.data(frequencyData.slice(0,24));
-  
-    circle
-      .enter().append('circle')
-      .attr("cy", function(d, i) {
-        // return Math.round( () + (i*Math.random) );
-        return Math.round(window.innerHeight*Math.random());
-      })
-      .attr("cx", function(d, i) {
-        // return Math.round( () + (i*Math.random) );
-        return Math.round(window.innerWidth*Math.random());
-      });
-    
-    circle
-      .attr("r", function(d, i) { return ((d/2)*(i/2))+i*2; })
-      .attr("fill", function(d,i) {return "hsla("+Math.round( i*(20+(d/255)) )+",50%,60%,0.7)"} )
-      .attr("stroke","white")
-      .exit().remove();
-    }
-
-}, false);
-
-// spots blend
-Reveal.addEventListener( 'vis_spots_blend', function(ev) {
-  screen.style.display = 'block';
-  currentAnimation = ev.type;
-
-  screen.innerHTML = '<section class="vis-spots-blend"><svg></svg></section>';
-  
-  var svg = d3.select('svg');
-  var circle = svg.selectAll('circle'),
-    line = svg.selectAll('line'),
-    radius = window.innerHeight/2.5-50;
-
-  animateDom = function() {
-    circle = circle.data(frequencyData.slice(0,24));
-  
-    circle
-      .enter().append('circle')
-      .attr("cy", function(d, i) {
-        // return Math.round( () + (i*Math.random) );
-        return Math.round(window.innerHeight*Math.random());
-      })
-      .attr("cx", function(d, i) {
-        // return Math.round( () + (i*Math.random) );
-        return Math.round(window.innerWidth*Math.random());
-      });
-    
-    circle
-      .attr("r", function(d, i) { return ((d/2)*(i/2))+i*2; })
-      .attr("fill", function(d,i) {return "hsla("+Math.round( i*(20+(d/255)) )+",50%,60%,0.7)"} )
-      .attr("stroke","white")
-      .exit().remove();
-    }
-      
-}, false);
-
-
-// chart
-Reveal.addEventListener( 'vis_chart', function(ev) {
-  screen.style.display = 'block';
-  currentAnimation = ev.type;
-
-  screen.innerHTML = '<section class="vis-chart"><svg></svg></section>';
-  
-  var svg = d3.select('svg');
-  var circle = svg.selectAll('circle'),
-    line = svg.selectAll('line'),
-    radius = window.innerHeight/2.5-50;
-
-  animateDom = function() {
-
-    circle = circle.data(newFreq);
-  
-    circle
-      .enter().append('circle')
-      .attr("cy", function(d, i) {
-        return Math.round(window.innerHeight/2 + (radius*Math.sin((2*i*Math.PI)/16)) );
-      })
-      .attr("cx", function(d, i) {
-        return Math.round(window.innerWidth/2 + (radius*Math.cos((2*i*Math.PI)/16)) );
-      });
-    
-    circle
-      .attr("r", function(d) { return d/2; })
-      .attr("fill", "hsla(200,50%,80%,0.7)")
-      .exit().remove();
-
-    line = line.data(frequencyData);
-
-    line
-      .enter().append('line')
-      .attr("x1", function(d, i) {
-        return Math.round(window.innerWidth/2 + (radius*Math.cos((2*i*Math.PI)/16)) );
-      })
-      .attr("y1", function(d, i) {
-        return Math.round(window.innerHeight/2 + (radius*Math.sin((2*i*Math.PI)/16)) );
-      })
-      .attr("stroke-width","3")
-      .attr("stroke","hsla(320,60%,50%,0.9)");
-    line
-      .attr("x2",function(d, i) {
-        return Math.round(window.innerWidth/2 + ( (radius-d)*Math.cos((2*i*Math.PI)/16)) );
-      })
-      .attr("y2",function(d, i) {
-        return Math.round(window.innerHeight/2 + ( (radius-d)*Math.sin((2*i*Math.PI)/16)) );
-      })
-      .exit().remove();
-  }
-      
-}, false);
-
-// chart
-Reveal.addEventListener( 'vis_chart_better', function(ev) {
-  screen.style.display = 'block';
-  currentAnimation = ev.type;
-
-  screen.innerHTML = '<section class="vis-chart-better"><svg></svg></section>';
-  
-  var svg = d3.select('svg');
-  var circle = svg.selectAll('circle'),
-    line = svg.selectAll('line'),
-    radius = window.innerHeight/2.5-50;
-
-  animateDom = function() {
-      circle = circle.data(frequencyData.slice(0,16));
-  
-    circle
-      .enter().append('circle')
-      .attr("cy", function(d, i) {
-        return Math.round(window.innerHeight/2 + (radius*Math.sin((2*i*Math.PI)/16)) );
-      })
-      .attr("cx", function(d, i) {
-        return Math.round(window.innerWidth/2 + (radius*Math.cos((2*i*Math.PI)/16)) );
-      });
-    
-    circle
-      .attr("r", function(d) { return d/2; })
-      .attr("fill", "hsla(200,50%,80%,0.7)")
-      .exit().remove();
-
-    line = line.data(frequencyData);
-
-    line
-      .enter().append('line')
-      .attr("x1", function(d, i) {
-        return Math.round(window.innerWidth/2 + (radius*Math.cos((2*i*Math.PI)/16)) );
-      })
-      .attr("y1", function(d, i) {
-        return Math.round(window.innerHeight/2 + (radius*Math.sin((2*i*Math.PI)/16)) );
-      })
-      .attr("stroke-width","3")
-      .attr("stroke","hsla(320,60%,50%,0.9)");
-    line
-      .attr("x2",function(d, i) {
-        return Math.round(window.innerWidth/2 + ( (radius-d)*Math.cos((2*i*Math.PI)/16)) );
-      })
-      .attr("y2",function(d, i) {
-        return Math.round(window.innerHeight/2 + ( (radius-d)*Math.sin((2*i*Math.PI)/16)) );
-      })
-      .exit().remove();
-  }
-      
-}, false);
-
-
-
-
-Reveal.addEventListener( 'no-visuals', function() {
-  screen.style.display = 'none';
-}, false);
-
-</script>
-
+<script src="scripts/talkEvents.js"></script>
 
 </body>
 </html>

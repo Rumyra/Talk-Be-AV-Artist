@@ -12,7 +12,7 @@
 .vis-speakers div {border-radius: 2px;}
 .vis-speakers img {
   display: block;
-  width:20vw; height:20vw;
+  width:25vw; height:25vw;
   mix-blend-mode: overlay;
   border-radius:2px;
 }

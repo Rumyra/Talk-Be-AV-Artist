@@ -11,7 +11,8 @@ if (audioContext) {
 
 // variables
 var analyserNode,
-    frequencyData = new Uint8Array(128);
+    frequencyData = new Uint8Array(4096),
+    newFreqData;
 const screen = document.querySelector('#screen');
 console.log(screen);
     
@@ -19,25 +20,82 @@ console.log(screen);
 // create an audio API analyser node and connect to source
 function createAnalyserNode(audioSource) {
   analyserNode = audioAPI.createAnalyser();
-  analyserNode.fftSize = 256;
+  analyserNode.fftSize = 8192;
   audioSource.connect(analyserNode);
 }
 
-var newFreq = new Uint8Array(16), arCount = 0;
+
 function animate() {
   requestAnimationFrame(animate);
   analyserNode.getByteFrequencyData(frequencyData);
-  frequencyData.forEach(newData);
+  newFreqData = adjustFreqData();
+  // frequencyData.forEach(newData);
   animateDom();
 }
 
+// var arrCountOne = 0, arrCountTwo = 0, newFreqOne = [], newFreqTwo = [];
+// function newDataOne(ele,ind,arr) {
+//   if (ind%256 === 0) {
+//     newFreqOne[arrCountOne] = ele;
+//     arrCountOne++;
+//   }
+// };
 
-function newData(ele,ind,arr) {
-  if (ind%8 === 0) {
-    newFreq[arCount] = ele;
-    arCount++;
+// function newDataTwo(ele,ind,arr) {
+//   if (ind%2 === 0) {
+//     newFreqTwo[arrCountTwo] = ele;
+//     arrCountTwo++;
+//   }
+// };
+
+// function animateTwo() {
+//   requestAnimationFrame(animate);
+//   analyserNode.getByteFrequencyData(frequencyData);
+//   newFreqData = adjustFreqData();
+
+//   frequencyData.forEach(newDataOne);
+
+//   animateDom(); 
+// }
+
+
+var shapeCount = 32;
+function adjustFreqData() {
+  analyserNode.getByteFrequencyData(frequencyData);
+  var removed = frequencyData.slice(0,1024);
+  
+  var newFreqs = [], prevRangeStart = 0, prevItemCount = 0;
+
+  // set up the maxPow & thus ratio based on shapeCount
+  var maxPow = Math.pow(2,shapeCount/2);
+  var ratio = 1024/maxPow;
+  
+  // looping - get values for new array based on shapeCount
+  for (let j=1; j<shapeCount+1; j++) {
+    var itemCount, rangeStart;
+
+    var pow = j/2;
+
+    // use ratio to get itemCount (round)
+    itemCount = Math.ceil( ((Math.pow(2, pow))*ratio)/2 );
+
+    rangeStart = prevRangeStart + Math.ceil(prevItemCount/2);
+     // get new values
+    var newValue = 0, total = 0;
+    for (let k=rangeStart; k<rangeStart+itemCount; k++) {
+      // add up items and divide by total
+      total += frequencyData[k];
+      newValue = parseInt(total/itemCount);
+    }
+    // add to new array
+    newFreqs.push(newValue);
+
+    prevItemCount = itemCount;
+    prevRangeStart = rangeStart;
   }
-};
+  
+  return newFreqs;
+}
 
 // getUserMedia success callback -> pipe audio stream into audio API
 var gotStream = function(stream) {
