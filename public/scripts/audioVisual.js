@@ -12,9 +12,8 @@ if (audioContext) {
 // variables
 var analyserNode,
     frequencyData = new Uint8Array(4096),
-    newFreqData;
-const screen = document.querySelector('#screen');
-console.log(screen);
+    newFreqData,
+    animateDom = function() {};
     
 
 // create an audio API analyser node and connect to source

@@ -52,27 +52,35 @@ $grey: #bebebe
     <div class="slides">
       <section>
 
+        <section data-background-color="#8c4c6f" data-state="no-visuals">
+          <h1>How to be a Web AV Artist</h1>
+          <p>Ruth John&nbsp;&nbsp;|&nbsp;&nbsp;@Rumyra</p>
+          <aside class="notes">
+            <p>Get some coffee!!</p>
+          </aside>
+        </section>
+
         <section data-background-color="#8c4c6f" data-background-image="images/me.jpg" data-state="no-visuals">
           <h1>How to be a Web AV Artist</h1>
           <p>Ruth John&nbsp;&nbsp;|&nbsp;&nbsp;@Rumyra</p>
           <aside class="notes">
-            <p>Get some fucking coffee!!</p>
+            <p>Get some coffee!!</p>
           </aside>
         </section>
 
         <!--visuals-->
-        <section data-background-color="#8c4c6f" data-state="vis_speakers">
+        <section data-background-color="#8c4c6f" data-state="vis_jsconf">
           <audio src="media/warren.m4a" data-autoplay id="warren"></audio>
           <aside class="notes">
             <p>DANCE!</p>
           </aside>
         </section>
 
-        <section data-background-color="#8c4c6f" data-state="no-visuals">
+        <section data-background-color="#8c4c6f" data-background-image="images/meLights.jpg" data-state="no-visuals">
           <h1>Ruth John&nbsp;&nbsp;|&nbsp;&nbsp;@Rumyra</h1>
           <p>Hello</p>
           <aside class="notes">
-            <p>Hey.. All Day Hey ... How are we doing today?</p>
+            <p>Hello JSConfEU! How are we doing today?</p>
             <p>I'm Ruth - Normally at this top of the talk people say what they do. It's usually a lot easier for me to show you.</p>
             <p>I'm here today to...</p>
           </aside>
@@ -119,6 +127,7 @@ $grey: #bebebe
             </ul>
           </div>
           <aside class="notes">
+            <p>I've written a function that monitors this talk - it will alert me with happy smilie face when I say something to include and with sad face when I say something I should avoid.</p>
             <p>Great - now we've got that sorted and my talk anxiety out the way and this becomes a super useful talk - let's begin!</p>
           </aside>
         </section>
@@ -158,7 +167,7 @@ $grey: #bebebe
           <p>Web Audio API</p>
           <aside class="notes">
             <p>Now there's quite a few ways we can get audio in a browser. Especially with the help of the web audio api.</p>
-            <p>Create oscillator - saw this earlier - sound wave, pitch, type of wave. Create your own wave shape</p>
+            <p>Create oscillator - sound wave, pitch, type of wave. Create your own wave shape</p>
             <p>Load them from the DOM</p>
             <p>Stream - so your audio or mic.</p>
             <p>Buffer the sound - load it in from a file.</p>
@@ -168,7 +177,7 @@ $grey: #bebebe
 
         <section data-background-color="#acc486" data-state="vis_spectrum_sound">
           <p>Demo with sound</p>
-          <audio src="media/warren.m4a" data-autoplay></audio>
+          <audio src="media/tokyo.mp3" data-autoplay></audio>
           <aside class="notes">
             <p>This is using a sound file</p>
           </aside>
@@ -180,14 +189,7 @@ $grey: #bebebe
             <p>This is piping in the sound from my microphone</p>
             <p>So that's great but how did we make that happen?</p>
             <p>OK so we've got sound - now we need to analyse it!</p>
-          </aside>
-        </section>
-
-        <section data-background-color="#acc486" data-state="no-visuals">
-          <h1>Create Visuals</h1>
-          <p>Analyse Sound</p>
-          <aside class="notes">
-            <p>Next...</p>
+            <p>NEXT ... </p>
           </aside>
         </section>
 
@@ -221,7 +223,7 @@ $grey: #bebebe
             </ul>
           </div>
           <aside class="notes">
-            <p>What? OK it appears we have a talk bot, absolutely willing to make sure this is a resonable talk. Of which I am failing. Oh ok I'm not allowed to talk about analytics - ok well I have a whole talk to go I can still pull this back.</p>
+            <p>Haha - ok the functions working - I am not allowed to talk about analytics! Oh well still a whole talk to go...</p>
           </aside>
         </section>
 
@@ -240,8 +242,7 @@ $grey: #bebebe
           <aside class="notes">
             <p>Again we can do this is a browser with the web audio api - it has an analyser node. This returns time data and frequency data.</p>
             <p>Nodes</p>
-            <p>Frequencies human ear</p>
-            <p>Analyser gives back array - bigger array better resolution</p>
+            <p>Analyser gives back array - bigger array better resolution - see next slide...</p>
           </aside>
         </section>
 
@@ -275,6 +276,7 @@ $grey: #bebebe
           <h1>Bridget Riley</h1>
           <p>Super cool artist</p>
           <aside class="notes">
+            <p>Experiments need inspiration</p>
             <p>This is Bridget Riley - she's an artist</p>
             <p>I discovered her in Scotland earlier this year - I wanted to visualise her art - something like this:</p>
           </aside>
@@ -292,6 +294,7 @@ $grey: #bebebe
           </aside>
         </section>
 
+        <!-- maybe move this to the end after d3 -->
         <section data-background-color="#acc486" class="lists" data-state="no-visuals">
           <div class="list-right">
             <ul>
@@ -300,20 +303,19 @@ $grey: #bebebe
             </ul>
           </div>
           <aside class="notes">
-            <p>Because we are simply using the DOM we have all the features of code.</p>
-            <p>We've got transforms - I wanted to do some symmetry - so I thought I'd try and create a function wich stole what was in the DOM and reflected and rotated it.</p>
+            <p>So I thought it would be great to talk about CSS at a JS conference.</p>
+            <p>Because I put all this in the DOM I thought wouldn't it be nice to write a function that took those DOM elements, duplicated them and transformed (reflected & rotated) them, to emulate symmetry.</p>
           </aside>
         </section>
 
         <section data-background-color="#acc486" data-state="vis_symmetry">
           
           <aside class="notes">
-            <p>I wondered if I could put a gif in</p>
+            <p>Then I wondered if I could put a gif in</p>
           </aside>
         </section>
 
         <section data-background-color="#acc486" data-state="vis_symmetry_gif">
-          
           <aside class="notes">
             <p>Yes I could</p>
           </aside>
@@ -328,19 +330,19 @@ $grey: #bebebe
             </ul>
           </div>
           <aside class="notes">
-            <p>Because we are simply using the DOM we have all the features of code.</p>
-            <p>We've got Filters and Blends.</p>
-            <p>All very suited to what we want to do.</p>
+            <p>There's also Filters and Blends.</p>
+            <p>Blends work great with dom elements - even svg</p>
+            <p>Filters with imagery and video *and* are useful for effects.</p>
           </aside>
         </section>
 
-        <section data-background-color="#8c4c6f" data-state="vis_speakers">
+        <section data-background-color="#8c4c6f" data-state="vis_jsconf_blend">
           <aside class="notes">
             <p>DANCE!</p>
           </aside>
         </section>
 
-        <section data-background-color="#acc486" data-background-image="images/filterCode.jpg" data-state="no-visuals">
+        <!-- <section data-background-color="#acc486" data-background-image="images/filterCode.jpg" data-state="no-visuals">
           <h1>Filters & Blend modes</h1>
           <aside class="notes">
             <p>These are sort of special transparency layer modes for your elements. If you're a user of photoshop you get a similar thing on layers.</p>
@@ -348,7 +350,7 @@ $grey: #bebebe
             <p>They add filters to images, video - that's super important.</p>
             <p>Things like greyscale, hue shift, inverting</p>
           </aside>
-        </section>
+        </section> -->
 
         <section data-background-color="#acc486" class="lists" data-state="no-visuals">
           <div class="list-right">
@@ -363,14 +365,11 @@ $grey: #bebebe
           </aside>
         </section>
 
-        <!-- make sure code has a workaround-->
         <section data-background-color="#acc486" data-background-image="images/cusPropCode.jpg" data-state="no-visuals">
           <h1>Custom Properties</h1>
           <aside class="notes">
             <p>Custom properties are basically variables - if you've used pre-processors. You delcare them in the top of your CSS, in a root block, beginning with a double dash.</p>
             <p>Now the great thing about these, is you can reference them directly in your JavaScript and by doing so they update, realtime, within your CSS.</p>
-            <p>You may have noticed the biggest caveat with all these examples - especially that flower.</p>
-            <p>Performance</p>
           </aside>
         </section>
 
@@ -448,7 +447,7 @@ $grey: #bebebe
         </section>
 
         <section data-background-color="#acc486" data-background-image="images/ben2.jpg" data-state="no-visuals">
-          <h1>Performance</h1>
+          <h1>@benjaminbenben</h1>
           <p>This is Ben</p>
           <aside class="notes">
             <p>So yes I was 'talking' to Ben.</p>
@@ -487,18 +486,18 @@ $grey: #bebebe
           </aside>
         </section>
 
-        <section data-background-color="#acc486" data-state="vis_spiral">
+        <section data-background-color="#acc486" data-state="vis_concentric">
           <aside class="notes">
           </aside>
         </section>
 
-        <section data-background-color="#acc486" data-state="vis_spots">
+        <section data-background-color="#acc486" data-state="vis_diagonalCirc">
           <aside class="notes">
             <p>And as Nadee pointed out yesterday we can add blend modes</p>
           </aside>
         </section>
 
-        <section data-background-color="#acc486" data-state="vis_spots_blend">
+        <section data-background-color="#acc486" data-state="vis_supChart">
           <aside class="notes">
           </aside>
         </section>
@@ -552,7 +551,7 @@ $grey: #bebebe
         </section>
 
         <section data-background-color="#acc486" data-background-image="images/partArr.jpg" data-transition="none">
-          <h1>Split Array</h1>
+          <h1>Slice Array</h1>
           <aside class="notes">
             <p>So we can just take this part of the array, and spread it out...</p>
           </aside>
@@ -575,7 +574,7 @@ $grey: #bebebe
           </aside>
         </section>
 
-        <section data-background-color="#acc486" data-state="vis_chart">
+        <section data-background-color="#acc486" data-state="vis_supChart_before">
         <audio src="media/screwUp.mp3" data-autoplay></audio>
           <aside class="notes">
             <p>This is a vis using the data before I manipulate it - straight form the audio api</p>
@@ -583,7 +582,7 @@ $grey: #bebebe
           </aside>
         </section>
 
-        <section data-background-color="#acc486" data-state="vis_chart_better">
+        <section data-background-color="#acc486" data-state="vis_supChart">
         <audio src="media/screwUp.mp3" data-autoplay></audio>
           <aside class="notes">
             <p>And this is the data after I run the magical function.</p>
@@ -597,8 +596,10 @@ $grey: #bebebe
           <h1>We Got Visuals</h1>
           <p>What's Next?</p>
           <aside class="notes">
-            <p>So many things we can do in the DOM</p>
-            <p>Right - ok we've covered a few techniques there to make the visuals, and I'm going to skip over the software side for just a moment and head straight into...</p>
+            <p>Couple of things i haven't mentioned - video. i actually use a lot of video - hence why I kept it in the dom, video is easy</p>
+            <p>3D I am just starting my 3D experiments. I tried a little with three.js but I think A frame is more suitable at this point.</p>
+            <p>But control...</p>
+            <p>Talk about keyboard - gamepad - sets, tracks, mix</p>
           </aside>
         </section>
 
@@ -618,6 +619,7 @@ $grey: #bebebe
           <p>Onboard Audio</p>
           <aside class="notes">
             <p>This is a musical keyboard</p>
+            <p>It has audio - it had MIDI, plug it in... it's orchastrates with other equipment...</p>
           </aside>
         </section>
 
@@ -668,14 +670,22 @@ $grey: #bebebe
           </aside>
         </section>
 
+        <section data-background-color="#ea8d88" data-background-image="images/midiCode.jpg" data-state="no-visuals">
+          <h1>Web MIDI API</h1>
+          <aside class="notes">
+            <p>So if I plug in a MIDI device - any - usually USB and run this code</p>
+            <p>I get numbers - pure and simple. Channel, note and velocity.</p>
+            <p>Clean & simple way to hardware enable ur browser.</p>
+          </aside>
+        </section>
+
         <section data-background-color="#ea8d88" data-state="vis_vjing">
           <h1>Demo</h1>
           <p>MIDI</p>
           <aside class="notes">
-            <p>There's one small - ok it's massive thing that I didn't put in earlier - that's video.</p>
-            <p>As a visual artist - I'll probably want to use video, but as it's just a video HTML element, it's simple and nothing to write home about</p>
             <p>So the big idea with having this controller is I can select different video clips, or afore seen animations and actually *mix* between them.</p>
-            <p>I can also attach different effects to buttons and trigger them too.</p> </aside>
+            <p>I can also attach different effects to buttons and trigger them too.</p>
+          </aside>
         </section>
 
         <section data-background-color="#8c4c6f" data-background-image="images/me.jpg" data-state="no-visuals">
@@ -699,14 +709,6 @@ $grey: #bebebe
           </aside>
         </section>
 
-        <section data-background-color="#8c4c6f" data-background-image="images/asia.jpg" data-state="no-visuals">
-          <h1>Gigs</h1>
-          <aside class="notes">
-            <p>This is me and my friend Tim doing a talk/gig at View Source in Berlin</p>
-            <p>And I even got to play a festival over the summer too</p>
-          </aside>
-        </section>
-
         <section data-background-color="#8c4c6f" data-background-image="images/github.png" data-state="no-visuals">
           <h1>Github</h1>
           <aside class="notes">
@@ -717,6 +719,18 @@ $grey: #bebebe
             <p>Demo tonight</p>
           </aside>
         </section>
+
+        <section data-background-color="#8c4c6f" data-background-image="images/asia.jpg" data-state="no-visuals">
+          <h1>Gigs</h1>
+          <aside class="notes">
+            <p>It doesn't feel real, but it is quite real</p>
+            <p>This is me and my friend Tim doing a talk/gig at View Source in Berlin</p>
+            <p>And I even got to play a festival over the summer too</p>
+            <
+          </aside>
+        </section>
+
+        
 
         <!-- <section data-background-color="#8c4c6f" data-state="no-visuals">
           <h1>Your Turn</h1>
@@ -806,11 +820,13 @@ $grey: #bebebe
         <section data-background-color="#8c4c6f" data-state="no-visuals">
           <h1>Ruth John</h1>
           <h1>@Rumyra</h1>
+          <h1>Music: @kinnoha</h1>
           <p>Thank You Very Much</p>
           <aside class="notes">
+            <p>music by kinnoh</p>
             <p>Thank you very much, I'm Ruth John</p>
             <p>All these examples you've seen are on codepen as part of codevember</p>
-            <p>Find me on the internets, follow me - I'm trying to get more followers than a guy named Ben Foxall</p>
+            <p>Find me on the internets, follow me</p>
             <p>Go have a relax and I hope you had a lovely conference!</p>
           </aside>
         </section>
@@ -824,6 +840,7 @@ $grey: #bebebe
 <script src="reveal/plugin/notes/notes.js"></script>
 <script src="reveal/plugin/highlight/highlight.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
+
 
 <script src="scripts/audioVisual.js"></script>
 
