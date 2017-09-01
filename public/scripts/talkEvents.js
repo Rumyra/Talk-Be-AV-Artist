@@ -140,7 +140,7 @@ Reveal.addEventListener( 'vis_vjing', function(ev) {
   screen.style.display = 'block';
   currentAnimation = ev.type;
 
-  screen.innerHTML = '<div id="two-screens"><section class="vis-spectrum"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></section><section class="vis-speakers"><img src="images/jsconfBk.jpg" style="width:100%;height:auto;" /></section></div>';
+  screen.innerHTML = '<div id="two-screens"><section class="vis-spectrum"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></section><section class="vis-speakers"><img src="images/wearedev.jpg" style="width:100%;height:auto;" /></section></div>';
   var allElsOne = document.querySelectorAll('.vis-spectrum i');
   var totalElsOne = allElsOne.length;
   // var allElsTwo = document.querySelectorAll('.vis-speakers div');
