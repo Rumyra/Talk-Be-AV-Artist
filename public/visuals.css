@@ -7,14 +7,14 @@
   align-content: space-around;
 }
 .vis-speakers div {
-  border-radius:50% 50% 0px 50%;
+  border-radius:50%;
   width:10vw; height:10vw; margin:0.5vw 1.2vw;
 }
 .vis-speakers img {
   display: block;
   width:10vw; height:10vw;
   mix-blend-mode: overlay;
-  border-radius:50% 50% 0px 50%;
+  border-radius:50%;
 }
 
 .vis-spectrum {

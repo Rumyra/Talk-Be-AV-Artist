@@ -56,12 +56,12 @@ $grey: #bebebe
         </section>
 
         <!--visuals-->
-        <section data-background-color="#8c4c6f" data-state="vis_vjing">
+        <!-- <section data-background-color="#8c4c6f" data-state="vis_vjing">
           
           <aside class="notes">
             <p>DANCE!</p>
           </aside>
-        </section>
+        </section> -->
 
         <section data-background-color="#8c4c6f" data-background-image="images/livejs2.jpg" data-state="no-visuals">
           <h1>{ Live : JS }</h1>
@@ -74,15 +74,15 @@ $grey: #bebebe
           </aside>
         </section>
 
-        <section data-background-color="#8c4c6f" data-state="no-visuals">
+        <section data-background-color="#8c4c6f" data-background-image="images/gig.jpg" data-state="no-visuals">
           <h1>Introducing...</h1>
           <h3 class="fragment fade-in">Martin @usefulthink</h3>
           <h3 class="fragment fade-in">Matt @mattmckegg</h3>
           <h3 class="fragment fade-in">Ruth @rumyra</h3>
           <aside class="notes">
             <p>Let me introduce...</p>
-            <p>On the lights we have Martin</p>
-            <p>On the music buttons we have Matt</p>
+            <p>On the lights we have Martin<br />
+            <p>On the music buttons we have Matt<br />
             <p>And I am in control of the projectors</p>
             <p>Everything you just saw & witness this morning was powered by HTML, CSS & Javascript</p>
             <p>We're also going to be playing tomorrow to halpe you wind down</p>
@@ -158,14 +158,13 @@ $grey: #bebebe
           </div>
           <aside class="notes">
             <p>Because we are simply using the DOM we have all the features of code.</p>
-            <p>We've got Filters and Blends.</p>
-            <p>All very suited to what we want to do.</p>
+            <p>We can try out new things - I quite like filters & blend modes</p>
           </aside>
         </section>
 
         <section data-background-color="#8c4c6f" data-state="vis_speakers">
           <aside class="notes">
-            <p>DANCE!</p>
+            <p>This is pretty much exactly the same code as before, but I just chucked in the images of the speakers and added some css filters into the mix</p>
           </aside>
         </section>
 
@@ -177,8 +176,8 @@ $grey: #bebebe
             </ul>
           </div>
           <aside class="notes">
-            <p>We've got Custom Properties, Filters and Blends.</p>
-            <p>All very suited to what we want to do.</p>
+            <p>Custom properties - these are cool</p>
+            <p>Just a quick revision - these are like preprosessor variables</p>
           </aside>
         </section>
 
@@ -214,10 +213,11 @@ $grey: #bebebe
           </aside>
         </section>
 
-        <section data-background-color="#ea8d88" data-state="no-visuals">
+        <section data-background-color="#ea8d88" data-background-image="images/puppies.jpg" data-state="no-visuals">
           <h1>Half Creative</h1>
           <h2>Half Build</h2>
           <aside class="notes">
+            <p>This is why it's so nice to have the crew around me</p>
             <p>So for me when it came to the build, I actually haven't spent a lot of time on the interface at all</p>
             <p>This is a completely different way to which I am used to working.</p>
             <p>My visual experiements are very much kept spearate from the software so I can concentrate on data structure, I spent a lot of time on audio analysis and getting that right</p>
@@ -416,7 +416,7 @@ Reveal.addEventListener( 'vis_vjing', function(ev) {
   currentAnimation = ev.type;
 
   function loadDom() {
-    screen.innerHTML = '<div id="two-screens"><section class="vis-spectrum"><img src="images/asia.gif" /></section><section class="vis-speakers"><div><img src="images/speakersCold/ben-schwarz.png" /></div><div><img src="images/speakersCold/charles-adler.png" /></div><div><img src="images/speakersCold/eric-muntz.png" /></div><div><img src="images/speakersCold/evangelina-ferreira.png" /></div><div><img src="images/speakersCold/henrik-joreteg.png" /></div><div><img src="images/speakersCold/ida-tin.png" /></div><div><img src="images/speakersCold/jessica-lord.png" /></div><div><img src="images/speakersCold/jordan-santell.png" /></div><div><img src="images/speakersCold/ken-wheeler.png" /></div><div><img src="images/speakersCold/kenneth-rohde.png" /></div><div><img src="images/speakersCold/lars-gunder-knudsen.png" /></div><div><img src="images/speakersCold/martin-schuhfuss.png" /></div><div><img src="images/speakersCold/matt-mckegg.png" /></div><div><img src="images/speakersCold/olafur-eliasson.png" /></div><div><img src="images/speakersCold/peter-shaughnessy.png" /></div><div><img src="images/speakersCold/phil-hawksworth.png" /></div><div><img src="images/speakersCold/ruth-john.png" /></div><div><img src="images/speakersCold/sam-richard.png" /></div><div><img src="images/speakersCold/una-kravets.png" /></div></section></div>';
+    screen.innerHTML = '<div id="two-screens"><section class="vis-spectrum"><img src="images/coldconf.gif" /></section><section class="vis-speakers"><div><img src="images/speakersCold/ben-schwarz.png" /></div><div><img src="images/speakersCold/charles-adler.png" /></div><div><img src="images/speakersCold/eric-muntz.png" /></div><div><img src="images/speakersCold/evangelina-ferreira.png" /></div><div><img src="images/speakersCold/henrik-joreteg.png" /></div><div><img src="images/speakersCold/ida-tin.png" /></div><div><img src="images/speakersCold/jessica-lord.png" /></div><div><img src="images/speakersCold/jordan-santell.png" /></div><div><img src="images/speakersCold/ken-wheeler.png" /></div><div><img src="images/speakersCold/kenneth-rohde.png" /></div><div><img src="images/speakersCold/lars-gunder-knudsen.png" /></div><div><img src="images/speakersCold/martin-schuhfuss.png" /></div><div><img src="images/speakersCold/matt-mckegg.png" /></div><div><img src="images/speakersCold/olafur-eliasson.png" /></div><div><img src="images/speakersCold/peter-shaughnessy.png" /></div><div><img src="images/speakersCold/phil-hawksworth.png" /></div><div><img src="images/speakersCold/ruth-john.png" /></div><div><img src="images/speakersCold/sam-richard.png" /></div><div><img src="images/speakersCold/una-kravets.png" /></div></section></div>';
   }
 
   var allElsTwo, totalElsTwo, screenOne, screenTwo, screenOneImage;
@@ -439,7 +439,7 @@ Reveal.addEventListener( 'vis_vjing', function(ev) {
     for (let i=0; i<totalElsTwo; i++) {
       var freqOp = (frequencyData[i]/255);
       //style i
-      allElsTwo[i].style.backgroundColor = 'hsla('+i*11+',30%,'+50+(freqOp*10)+'%,1)';
+      allElsTwo[i].style.backgroundColor = 'hsla('+i*11+',30%,'+50+'%,1)';
 
       
       allElsTwo[i].style.opacity = freqOp;
