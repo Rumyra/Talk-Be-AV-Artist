@@ -69,7 +69,7 @@ $grey: #bebebe
         </section>
 
         <!--visuals-->
-        <section data-background-color="#8c4c6f" data-state="vis_diagonalCirc">
+        <section data-background-color="#8c4c6f" data-state="vis_refresh">
           <audio src="media/warren.m4a" data-autoplay id="warren"></audio>
           <aside class="notes">
             <p>DANCE!</p>
@@ -80,7 +80,7 @@ $grey: #bebebe
           <h1>Ruth John&nbsp;&nbsp;|&nbsp;&nbsp;@Rumyra</h1>
           <p>Hello</p>
           <aside class="notes">
-            <p>Hello we are Simple Web! How are we doing today?</p>
+            <p>Hello we are Refresh! How are we doing today?</p>
             <p>I'm Ruth - Normally at this top of the talk people say what they do. It's usually a lot easier for me to show you.</p>
             <p>I had the choice of two talks. I could talk to u audio - this is dev heavy!</p>
             <p>I'm here today to...</p>
@@ -93,7 +93,7 @@ $grey: #bebebe
           <aside class="notes">
             <p>...talk to you about how to be a web AV artist</p>
             <p>So I'll be honest with you - i struggle with the practicality of this talk. Who here even knows what an A/V artist is?</p>
-            <p>Right? Let alone, who needs to know how to be one! I fear I am not going to give you any practical advise for you to take away - yes go back to your jobs tomorrow and code some AV - right there in your web page slash application...</p>
+            <p>Right? Let alone, who needs to know how to be one! I fear I am not going to give you any practical advise for you to take away - yes go back to your jobs monday and code some AV - right there in your web page slash application...</p>
           </aside>
         </section>
 
@@ -250,16 +250,17 @@ $grey: #bebebe
         <section data-background-color="#acc486" data-background-image="images/freqArray.jpg" data-state="no-visuals">
           <h1>Array frequency velocities</h1>
           <aside class="notes">
-            <p>And we get this array of freq volumes returned</p>
+            <p>And we get this array of freq volumes returned - amplitude values</p>
             <p>0-20k hertz</p>
-            <p>Frequencies human ear</p>
-            <p>Analyser gives back array - bigger array better resolution</p>
+            <p>Frequencies human ear = tone. Value for each tone</p>
+            <p>Analyser gives back array - bigger array better resolution - more tones we cover</p>
           </aside>
         </section>
 
         <section data-background-color="#acc486" data-state="vis_spectrum_sound">
           <aside class="notes">
             <p>As this is is a bunch of 'i' elements that I change the height on depending on the volume value of the frequency.</p>
+            <p>Allocated each one to each el in arr</p>
           </aside>
         </section>
 
@@ -269,6 +270,7 @@ $grey: #bebebe
           <aside class="notes">
             <p>So this is our really basic example. Take some repeating DOM elements, loop over them and match them up with an item in our frequencyData array.</p>
             <p>When the volume for that frequency gets higher, the elements height gets bigger.</p>
+            <p>Cool done, past four - totally legit beer time</p>
             <p>Just using the DOM - there's plenty we can do with that - EXPERIMENTS</p>
           </aside>
         </section>
@@ -305,6 +307,7 @@ $grey: #bebebe
           </div>
           <aside class="notes">
             <p>So I thought it would be great to talk about CSS at a JS conference.</p>
+            <p>Transform function</p>
             <p>Because I put all this in the DOM I thought wouldn't it be nice to write a function that took those DOM elements, duplicated them and transformed (reflected & rotated) them, to emulate symmetry.</p>
           </aside>
         </section>
@@ -468,6 +471,7 @@ $grey: #bebebe
           </div>
           <aside class="notes">
             <p>Very much in the don't use libraries until I have too.</p>
+            <p>d3 bar charts & pie charts - beginning to change</p>
             <p>But I started digging around and it had great methods - for creating Dom elements, for simply doing maths on arrays which could come in useful with this frequency data we have.</p>
             <p>THus began my next set of experiments.</p>
           </aside>
@@ -539,6 +543,7 @@ $grey: #bebebe
           <aside class="notes">
             <p>Not that high</p>
             <p>The other thing to note is we're splitting these frequencies up in equal measures</p>
+            <p>Data from audio api - gaps are equal</p>
           </aside>
         </section>
 
@@ -548,6 +553,7 @@ $grey: #bebebe
           <aside class="notes">
             <p>These are all the note A on the keyboard - they are octave jumps - all the same harmoniously</p>
             <p>440 in the middle, 220 below and 880 above. Gap gets bigger.</p>
+            <p>Represent the array better</p>
           </aside>
         </section>
 
