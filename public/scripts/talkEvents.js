@@ -140,7 +140,7 @@ Reveal.addEventListener( 'vis_vjing', function(ev) {
   screen.style.display = 'block';
   currentAnimation = ev.type;
 
-  screen.innerHTML = '<div id="two-screens"><section class="vis-spectrum"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></section><section class="vis-speakers"><img src="images/refresh.png" style="width:70%;height:auto;" /></section></div>';
+  screen.innerHTML = '<div id="two-screens"><section class="vis-spectrum"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></section><section class="vis-speakers"><img src="images/frontendcon.png" style="width:100%;height:auto;" /></section></div>';
   var allElsOne = document.querySelectorAll('.vis-spectrum i');
   var totalElsOne = allElsOne.length;
   // var allElsTwo = document.querySelectorAll('.vis-speakers div');
@@ -759,6 +759,73 @@ Reveal.addEventListener( 'vis_chart_better', function(ev) {
   }
       
 }, false);
+
+function drawHex(ctx, sideLength, startX, startY) {
+
+  // maths mother fucker
+  const moveX = Math.sin(Math.radians(30))*sideLength;
+  const moveY = Math.cos(Math.radians(30))*sideLength;
+
+  // I actually want the origin to be in the centre
+  var startX = startX-(sideLength/2);
+  var startY = startY-moveY;
+
+  ctx.beginPath(); // instigate
+  ctx.moveTo(startX, startY); // start at pos
+  ctx.lineTo(startX+sideLength, startY); // go right along top (we're drawing clockwise from top left)
+
+  ctx.lineTo(startX+sideLength+moveX, startY+moveY);
+  ctx.lineTo(startX+sideLength, startY+(moveY*2));
+  ctx.lineTo(startX, startY+(moveY*2));
+  ctx.lineTo(startX-moveX, startY+moveY);
+  ctx.lineTo(startX, startY);
+  ctx.closePath();
+}
+// Converts from degrees to radians.
+Math.radians = function(degrees) {
+  return degrees * Math.PI / 180;
+};
+
+Reveal.addEventListener('vis_canvas',
+  function(ev) {
+    screen.style.display = 'block';
+    currentAnimation = ev.type;
+    screen.innerHTML = '<canvas id="canvas"></canvas>';
+
+    var canvas = document.querySelector('#canvas');
+    canvas.width = screenVals.width;
+    canvas.height = screenVals.height;
+    var ctx = canvas.getContext('2d');
+
+    var bigData;
+
+    animateDom = function() {
+      ctx.fillStyle = "#000";
+      ctx.fillRect(0,0,canvas.width, canvas.height);
+
+      // var frequencies = adjustFreqData(128);
+      // var newData = frequencies.newFreqs;
+      bigData = newFreqData.concat(newFreqData).concat(newFreqData).concat(newFreqData).concat(newFreqData).concat(newFreqData);
+
+      for(var i=0;i<bigData.length;i++) {
+        var d = bigData[i];
+
+        ctx.globalCompositeOperation = "hard-light";
+
+        // ctx.beginPath();
+        drawHex(ctx, d, (i%24)*80, (i%14)*50);
+        ctx.strokeStyle = "hsla("+(i*3)+",60%,80%,1)";
+        ctx.fillStyle = "hsla("+(i*3)+",60%,"+d/2+"%,0.4)";
+        ctx.lineWidth = 2;
+        // ctx.arc(x, y, d/(j*5), 0, Math.PI*2);
+        ctx.fill();
+        ctx.stroke();
+
+      }
+
+    }
+  }
+)
 
 // refresh
 Reveal.addEventListener( 'vis_refresh', function(ev) {
