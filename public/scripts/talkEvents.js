@@ -140,7 +140,7 @@ Reveal.addEventListener( 'vis_vjing', function(ev) {
   screen.style.display = 'block';
   currentAnimation = ev.type;
 
-  screen.innerHTML = '<div id="two-screens"><section class="vis-spectrum"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></section><section class="vis-speakers"><img src="images/frontendcon.png" style="width:100%;height:auto;" /></section></div>';
+  screen.innerHTML = '<div id="two-screens"><section class="vis-spectrum"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></section><section class="vis-speakers"><img src="images/404.png" style="width:100%;height:auto;" /></section></div>';
   var allElsOne = document.querySelectorAll('.vis-spectrum i');
   var totalElsOne = allElsOne.length;
   // var allElsTwo = document.querySelectorAll('.vis-speakers div');
@@ -324,8 +324,8 @@ Reveal.addEventListener( 'vis_sunburst', function(ev) {
   var arc = d3.svg.arc()
     .startAngle(function(d, i) { return (i/8)*Math.PI; })
     .endAngle(function(d, i) { return ((i+1)/8)*Math.PI; })
-    .innerRadius(function(d, i) { return radius/3; })
-    .outerRadius(function(d, i) { return d*2; });
+    .innerRadius(function(d, i) { return radius/4; })
+    .outerRadius(function(d, i) { return d*2.5; });
 
 // 32
   animateDom = function() {
@@ -337,7 +337,8 @@ Reveal.addEventListener( 'vis_sunburst', function(ev) {
 
     arcs
       .attr("d", arc)
-      .style("fill", function(d,i) { return 'hsla('+i*6+',60%,'+Math.floor(d/2.5)+'%,'+d/255+')'; })
+      .style("stroke", function(d,i) { return 'hsla('+i*10+',60%,'+Math.floor(d/1.5)+'%,1)'; })
+      .style("fill", function(d,i) { return 'hsla('+i*10+',60%,'+Math.floor(d/2.5)+'%,'+d/155+')'; })
       .exit().remove();
   }
 }, false);
@@ -482,8 +483,9 @@ Reveal.addEventListener( 'vis_diagonalCirc', function(ev) {
     });
   
   shape
-    .attr("r", function(d, i) { return (d/2)*i/2; })
-    .attr("fill", function(d,i) {return "hsla("+Math.round( i*(20+(d/255)) )+",50%,80%,0.5)"} )
+    .attr("r", function(d, i) { return Math.round(Math.pow(d,1.2)); })
+    .attr("fill", function (d, i) { return "hsla(" + Math.round(i * (20 + (d / 255))) + ",50%,80%,0.5)" })
+    .attr("stroke", function(d,i) {return "hsla("+Math.round( i*(20+(d/255)) )+",50%,80%,1)"} )
     .exit().remove();
   }
 
@@ -504,7 +506,7 @@ Reveal.addEventListener( 'vis_concentric', function(ev) {
   .startAngle(0)
   .endAngle(function(d, i) { return d/20; })
   .innerRadius(function(d, i) { return i*32; })
-  .outerRadius(function(d, i) { return (i+1)*24; });
+  .outerRadius(function(d, i) { return (i*32)+40; });
 
 // 24
   animateDom = function() {
@@ -512,12 +514,12 @@ Reveal.addEventListener( 'vis_concentric', function(ev) {
   
     shape
     .enter().append("path")
-    .attr("transform", "translate(" + screenVals.width / 2 + "," + screenVals.height * .52 + ")")
-    .style("stroke", "#222");
+    .attr("transform", "translate(" + screenVals.width / 2 + "," + screenVals.height * .52 + ")");
 
   shape
     .attr("d", conArc)
-    .style("fill", function(d,i) { return 'hsla('+i*16+',60%,60%,'+d/200+')'; })
+    .style("stroke", function (d, i) { return 'hsla(' + 100 + (i * 20) + ',60%,60%,' + d / 50 + ')'; })
+    .style("fill", function(d,i) { return 'hsla('+100+(i*20)+',60%,60%,'+d/100+')'; })
     .exit().remove();
   }
       
