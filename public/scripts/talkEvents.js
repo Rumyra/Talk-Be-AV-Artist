@@ -140,7 +140,7 @@ Reveal.addEventListener( 'vis_vjing', function(ev) {
   screen.style.display = 'block';
   currentAnimation = ev.type;
 
-  screen.innerHTML = '<div id="two-screens"><section class="vis-spectrum"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></section><section class="vis-speakers"><img src="images/sheffield.png" style="width:100%;height:auto;" /></section></div>';
+  screen.innerHTML = '<div id="two-screens"><section class="vis-spectrum"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></section><section class="vis-speakers"><img src="images/fronteers.png" style="width:100%;height:auto;" /></section></div>';
   var allElsOne = document.querySelectorAll('.vis-spectrum i');
   var totalElsOne = allElsOne.length;
   // var allElsTwo = document.querySelectorAll('.vis-speakers div');
@@ -172,10 +172,10 @@ Reveal.addEventListener( 'vis_vjing', function(ev) {
       screenOne.style.opacity = 1-(data[2]/127);
     }
 
-    if (data[0] === 144 && data[1] === 43) {
+    if (data[0] === 144 && data[1] === 6) {
         screenOne.style.filter = 'invert(100%)';
         screenTwo.style.filter = 'invert(100%)';
-    } else if (data[0] === 144 && data[1] === 39) {
+    } else if (data[0] === 144 && data[1] === 5) {
       screenOne.style.filter = 'invert(0%)';
       screenTwo.style.filter = 'invert(0%)';
     }
@@ -323,7 +323,7 @@ Reveal.addEventListener( 'vis_sunburst', function(ev) {
     .startAngle(function(d, i) { return (i/8)*Math.PI; })
     .endAngle(function(d, i) { return ((i+1)/8)*Math.PI; })
     .innerRadius(function(d, i) { return radius/4; })
-    .outerRadius(function(d, i) { return d*2.5; });
+    .outerRadius(function(d, i) { return d*3.5; });
 
 // 32
   animateDom = function() {
@@ -481,7 +481,7 @@ Reveal.addEventListener( 'vis_diagonalCirc', function(ev) {
     });
 
   shape
-    .attr("r", function(d, i) { return Math.round(Math.pow(d,1.2)); })
+    .attr("r", function(d, i) { return Math.round(Math.pow(d,1.3)); })
     .attr("fill", function (d, i) { return "hsla(" + Math.round(i * (20 + (d / 255))) + ",50%,80%,0.5)" })
     .attr("stroke", function(d,i) {return "hsla("+Math.round( i*(20+(d/255)) )+",50%,80%,1)"} )
     .exit().remove();
@@ -502,7 +502,7 @@ Reveal.addEventListener( 'vis_concentric', function(ev) {
 
   var conArc = d3.svg.arc()
   .startAngle(0)
-  .endAngle(function(d, i) { return d/20; })
+  .endAngle(function(d, i) { return d/10; })
   .innerRadius(function(d, i) { return i*32; })
   .outerRadius(function(d, i) { return (i*32)+40; });
 
