@@ -10,7 +10,7 @@
 
   <!--meta content-->
   <link rel="shortcut icon" href="favicon.ico" />
-  
+
   <meta name="author" content="Ruth John (@rumyra)">
   <meta name="dcterms.rightsHolder" content="Ruth John for Rumyra Ltd, United Kingdom, 2015">
   <title>How to be a Web A/V Artist</title>
@@ -34,7 +34,7 @@
     }
     svg {width: 100vw; height: 100vh; padding:0px; margin:0px;}
   </style>
-  
+
 </head>
 
 <!--
@@ -69,7 +69,8 @@ $grey: #bebebe
         </section>
 
         <!--visuals-->
-        <section data-background-color="#8c4c6f" data-background-video="media/frontendcon.mp4">
+        <section data-background-color="#8c4c6f"
+        data-state="vis_canvas">
           <audio src="media/warren.m4a" data-autoplay id="warren"></audio>
           <aside class="notes">
             <p>DANCE!</p>
@@ -80,24 +81,25 @@ $grey: #bebebe
           <h1>Ruth John&nbsp;&nbsp;|&nbsp;&nbsp;@Rumyra</h1>
           <p>Hello</p>
           <aside class="notes">
-            <p>Hello we are Warsaw - Front End Connect! How are we doing today?</p>
+            <p>Hello Fronteers!</p>
+            <p>How are we doing today?</p>
+            <p>I just flew in - they hired me to play you some hip hop</p>
             <p>I'm Ruth - Normally at this top of the talk people say what they do. It's usually a lot easier for me to show you.</p>
-            <p>I had the choice of two talks. I could talk to u audio - this is dev heavy!</p>
-            <p>What a great first day!</p>
+            <p>I am here to talk to you about...</p>
           </aside>
         </section>
 
-        <section data-background-color="#8c4c6f" class="lists" data-state="no-visuals">
+        <!-- <section data-background-color="#8c4c6f" class="lists" data-state="no-visuals">
           <div class="list-right">
             <ul>
               <h1>What a great day!</h1>
-              <li class="fragment fade-in"><p>Thing one</p></li>
-              <li class="fragment fade-in"><p>Operational Excellence</p></li>
-              <li class="fragment fade-in"><p>Chat Ops</p></li>
-              <li class="fragment fade-in"><p>Orchestration</p></li>
+              <li class="fragment fade-in"><p>CSS Custom Properties</p></li>
+              <li class="fragment fade-in"><p>Web Components</p></li>
+              <li class="fragment fade-in"><p>React AND Angular</p></li>
+              <li class="fragment fade-in"><p>Flow</p></li>
             </ul>
           </div>
-          <!-- <div class="list-right">
+          <div class="list-right">
             <ul>
               <h1>Include</h1>
               <li><p>Duct tape</p></li>
@@ -105,30 +107,31 @@ $grey: #bebebe
               <li><p>Bikeshedding</p></li>
               <li><p>Coffee</p></li>
             </ul>
-          </div> -->
+          </div>
           <aside class="notes">
             <p>We've seen some amazing things today</p>
             <p>I'm not even sure where to begin - I certainly didn't see them all!</p>
+            <p>Amazing useful things</p>
             <p>And all I'm hear to talk to you about is...</p>
           </aside>
-        </section>
+        </section> -->
 
         <section data-background-color="#8c4c6f" data-state="no-visuals">
           <h1>How to be a Web AV Artist</h1>
           <p>Sorry you what now?</p>
           <aside class="notes">
             <p>...how to be a web AV artist</p>
-            <p>So I'll be honest with you - i struggle with the practicality of this talk. Who here even knows what an A/V artist is?</p>
+            <p>So I'll be honest with you - i struggle with the practicality of this talk. Who here even knows what an A/V artist is? audio visualisation</p>
             <p>Right? Let alone, who needs to know how to be one! I fear I am not going to give you any practical advise for you to take away - yes go back to your jobs monday and code some AV - right there in your web page slash application...</p>
           </aside>
         </section>
 
         <section data-background-color="#8c4c6f" data-background-image="images/venn.png" data-state="no-visuals">
-          <h1>Who's seen this?</h1>
+          <h1>Helpful Venn Diagram</h1>
           <p>Source: @ThePracticalDev</p>
-          
+
           <aside class="notes">
-            <p>This was a venn diagram on the internets about 6 months ago</p>
+            <p>I found a helpful venn diagram</p>
             <p>It's about what speakers talk about and what attendees want to hear about so I took this very literally</p>
             <p>So I made two lists - right things I must say for this to be useful are on the right - so that's duct tape, workarounds, coffee and bikeshedding.</p><p>Thing's I have to avoid are on the left - orchestration, operational excellence, analytics and chat ops.</p>
           </aside>
@@ -214,7 +217,7 @@ $grey: #bebebe
         <p>Demo with mic</p>
           <aside class="notes">
             <p>This is piping in the sound from my microphone</p>
-            <p>So that's great but how did we make that happen?</p>
+            <p>Preferred method</p>
             <p>OK so we've got sound - now we need to analyse it!</p>
             <p>NEXT ... </p>
           </aside>
@@ -228,7 +231,7 @@ $grey: #bebebe
             <p>Did earlier - he created sound with an oscillator - now I chatted with Ben</p>
           </aside>
         </section> -->
-        
+
         <section data-background-color="#acc486" class="lists" data-state="no-visuals">
           <audio src="media/XPexclaim.m4a" data-autoplay></audio>
           <div class="list-left">
@@ -339,7 +342,7 @@ $grey: #bebebe
         </section>
 
         <section data-background-color="#acc486" data-state="vis_symmetry">
-          
+
           <aside class="notes">
             <p>Then I wondered if I could put a gif in</p>
           </aside>
@@ -483,6 +486,7 @@ $grey: #bebebe
           <aside class="notes">
             <p>So yes I was 'talking' to Ben.</p>
             <p>He was helping me with one particular interactive piece i was doing. Blog post.</p>
+            <p>He said - hey look you're throwing things at the dom & drawing them, you're using data - have you thought about using d3?</p>
           </aside>
         </section>
 
@@ -510,7 +514,7 @@ $grey: #bebebe
           <aside class="notes">
             <p>This is the inspiration for my d3 set - it's a book called super graphic by tim leong - it 'charts' data from comics and graphic novels in a lovely visual way</p>
           </aside>
-        </section>        
+        </section>
 
         <section data-background-color="#acc486" data-state="vis_sunburst">
           <aside class="notes">
@@ -543,8 +547,10 @@ $grey: #bebebe
         <section data-background-color="#acc486" data-background-image="images/freqArray.jpg" data-state="no-visuals">
           <h1>d3 shape per item</h1>
           <aside class="notes">
+            <p>Before looping over array & creating element pre item</p>
+            <p>d3 kinda does this for us & we can create an svg per item</p>
             <p>So we can make this array as many items as we want</p>
-            <p>We attach a shape per item - or rather d3 kinda does this for us - then we can use the data per item as we want, to change colour, shape, size etc...</p>
+            <p>Use the data to change colour, shape, size etc...</p>
           </aside>
         </section>
 
@@ -566,7 +572,7 @@ $grey: #bebebe
         </section> -->
 
         <section data-background-color="#acc486" data-background-image="images/freqArray.jpg" data-state="no-visuals" data-transition="none">
-          <h1>Array frequency velocities</h1>
+          <h1>Array frequency amplitudes</h1>
           <aside class="notes">
             <p>Let's for a second go back to our array of frequency velocities.</p>
             <p>It goes all the way up to 20kHz - this is pretty - in fact it's really high.</p>
@@ -633,13 +639,17 @@ $grey: #bebebe
             <p>Now I do realise this isn't a perfect science - it's not suppose to be. I'm making this betterer for visuals. And actually this makes it easier for me to detect low, mid and high frequencies.</p>
           </aside>
         </section>
-        
 
-        <section data-background-color="#ea8d88" data-background-image="images/codevember.jpg" data-state="no-visuals">
+        <section data-background-color="#ea8d88" data-state="no-visuals">
           <h1>Canvas?</h1>
           <p>2D / 3D</p>
           <aside class="notes">
             <p>So the thing is. What about canvas. We're just chucking things at the dom and actually, although things appear smoother now we're working with svgs, when you try to redraw a *lot* of stuff we come across the same performance problems as before</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#ea8d88" data-state="vis_canvas">
+          <aside class="notes">
           </aside>
         </section>
 
@@ -757,17 +767,7 @@ $grey: #bebebe
           <aside class="notes">
             <p>This is a collective I started - with a few people from all around the world - we're a bunch of musicians and visual artists who create our thangs with JavaScript</p>
             <p>And we have 3 gigs booked in over the next month. It's really real... all from a pipe dream to re-create a piece of software in a browser.</p>
-          </aside>
-        </section>
-
-        <section data-background-color="#8c4c6f" data-background-image="images/github.png" data-state="no-visuals">
-          <h1>Github</h1>
-          <aside class="notes">
-            <p>We even have a github org so it has to be real</p>
-            <p>Really it's great for us to give back to the community.</p>
-            <p>Why code my own software - there's native? Because code. I'm not the only one!</p>
-            <p>Two software - hacky - real will sit here</p>
-            <p>Demo tonight</p>
+            <p>It's all about playing live, using the code we already know.</p>
           </aside>
         </section>
 
@@ -775,13 +775,31 @@ $grey: #bebebe
           <h1>Gigs</h1>
           <aside class="notes">
             <p>It doesn't feel real, but it is quite real</p>
-            <p>This is me and my friend Tim doing a talk/gig at View Source in Berlin</p>
+            <p>See we play gigs</p>
             <p>And I even got to play a festival over the summer too</p>
-            <
           </aside>
         </section>
 
-        
+        <section data-background-color="#8c4c6f" data-background-image="images/github.png" data-state="no-visuals">
+          <h1>Github</h1>
+          <aside class="notes">
+            <p>We even have a github org so it has to be real</p>
+            <p>Find us we have a slack channel - we are a community group</p>
+            <p>Really it's great for us to give back to the community.</p>
+            <p>Why code my own software - there's native? Because code. I'm not the only one!</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#8c4c6f" data-state="no-visuals">
+          <h1>End of the story?</h1>
+          <p>Performance</p>
+          <aside class="notes">
+            <p>The story doesn't actually end there. You see this is all good in theory, but you play a live gig where by you're chucking a few hundred re animated shapes at a 2D canvas</p>
+            <p>My software crashed live at a gig in Budapest</p>
+            <p>I put stuff in a worker</p>
+          </aside>
+        </section>
+
 
         <!-- <section data-background-color="#8c4c6f" data-state="no-visuals">
           <h1>Your Turn</h1>
@@ -867,7 +885,7 @@ $grey: #bebebe
             <p>Most useful talk EVER!</p>
           </aside>
         </section>
-        
+
         <section data-background-color="#8c4c6f" data-state="no-visuals">
           <h1>Ruth John</h1>
           <h1>@Rumyra</h1>
