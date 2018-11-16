@@ -50,11 +50,17 @@ $black:#111;
   font-style: normal;
   src: url('../../../fonts/Sacramento/Sacramento-Regular.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Pac';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../../../fonts/Pacifico/Pacifico-Regular.ttf') format('truetype');
+}
 
 
 $backgroundColor: $white;
 // Primary/body text
-$mainFont: 'Sac', cursive;
+$mainFont: 'Pac', cursive;
 $mainFontSize: 36px;
 $mainColor: $white;
 
@@ -102,13 +108,13 @@ $selectionColor: #fff;
 @import "../template/theme";
 // ---------------------------------------------
 .reveal {
-  
+
   .slides {text-align:right;}
 
   h1 {border-bottom: 2px solid $white;}
-  p {font-size:2em;}
+  p {font-size:1.4em;}
 
-} 
+}
 
 .reveal .slides pre code {
   padding: $blockMargin;

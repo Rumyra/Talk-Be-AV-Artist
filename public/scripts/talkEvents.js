@@ -820,6 +820,30 @@ Reveal.addEventListener('vis_canvas',
         ctx.stroke();
       }
 
+      if (data[0] === 144 && data[1] === 0 && data[2] === 127) {
+        canvas.style.filter = 'invert(100%)';
+      } else if (data[0] === 144 && data[1] === 0 && data[2] === 0) {
+        canvas.style.filter = 'invert(0%)';
+      }
+
+      if (data[0] === 144 && data[1] === 1 && data[2] === 127) {
+        canvas.style.filter = 'blur(10px)';
+      } else if (data[0] === 144 && data[1] === 1 && data[2] === 0) {
+        canvas.style.filter = 'blur(0px)';
+      }
+
+      if (data[0] === 144 && data[1] === 2 && data[2] === 127) {
+        canvas.style.filter = 'grayscale(100%)';
+      } else if (data[0] === 144 && data[1] === 2 && data[2] === 0) {
+        canvas.style.filter = 'grayscale(0%)';
+      }
+
+      if (data[0] === 144 && data[1] === 3 && data[2] === 127) {
+        canvas.style.filter = 'hue-rotate(180deg)';
+      } else if (data[0] === 144 && data[1] === 3 && data[2] === 0) {
+        canvas.style.filter = 'hue-rotate(0deg)';
+      }
+
     }
   }
 )
