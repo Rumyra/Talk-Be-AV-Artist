@@ -9,12 +9,20 @@ if (audioContext) {
   alert("Oh nos! It appears your browser does not support the Web Audio API, please upgrade or use a different browser");
 }
 
+window.addEventListener("keydown", event => {
+ if (event.code === 'ArrowDown') {
+
+   audioAPI.resume();
+
+ }
+})
+
 // variables
 var analyserNode,
     frequencyData = new Uint8Array(4096),
     newFreqData,
     animateDom = function() {};
-    
+
 
 // create an audio API analyser node and connect to source
 function createAnalyserNode(audioSource) {
@@ -54,7 +62,7 @@ function animate() {
 
 //   frequencyData.forEach(newDataOne);
 
-//   animateDom(); 
+//   animateDom();
 // }
 
 
@@ -62,13 +70,13 @@ var shapeCount = 32;
 function adjustFreqData() {
   analyserNode.getByteFrequencyData(frequencyData);
   var removed = frequencyData.slice(0,1024);
-  
+
   var newFreqs = [], prevRangeStart = 0, prevItemCount = 0;
 
   // set up the maxPow & thus ratio based on shapeCount
   var maxPow = Math.pow(2,shapeCount/2);
   var ratio = 1024/maxPow;
-  
+
   // looping - get values for new array based on shapeCount
   for (let j=1; j<shapeCount+1; j++) {
     var itemCount, rangeStart;
@@ -92,7 +100,7 @@ function adjustFreqData() {
     prevItemCount = itemCount;
     prevRangeStart = rangeStart;
   }
-  
+
   return newFreqs;
 }
 
@@ -116,7 +124,7 @@ navigator.mediaDevices.getUserMedia({ audio: true, video: false })
 //     screen.innerHTML('<section><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></section>');
 //   },
 //   get allEls() {
-//     return document.querySelectorAll('#screen i'); 
+//     return document.querySelectorAll('#screen i');
 //   },
 //   set totalEls() {
 //     this.allEls.length;
@@ -136,7 +144,7 @@ navigator.mediaDevices.getUserMedia({ audio: true, video: false })
 //       allEls[i].style.height = freqVol+'vh';
 //     }
 //   }
-  
+
 // }
 
 

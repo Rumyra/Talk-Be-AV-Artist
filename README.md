@@ -2,13 +2,7 @@
 
 This is the How to be a Web A/V Artist talk by [Ruth John](https:/twitter.com/Rumyra)
 
-Versions of this talk have been seen at:
-
-- [Front End Connect, Warsaw]()
-- [Refresh Rocks, Tallin]()
-- [..., Vienna]()
-- [JSConfEU, Berlin]()
-- [JSConfAU, Melbourne]()
+Check out versions and recordings of this talk [here on notist](https://noti.st/rumyra)
 
 ## About
 
@@ -16,16 +10,12 @@ Come and be fascinated by the world of audio visualisation in a browser. This is
 
 This is a fun and engaging talk where I cover a whole myriad of techniques used to create audio visuals within the browser, based on my own experiments and learnings. I use custom properties in interesting ways to enhance the way the visuals are presented and pipe the realtime data directly into the DOM. I've processed the data we receive from the analyser node of the Web Audio API to produce a more logarithmical distribution which better matches music scale and thus produces better visuals. As well as introducing the use of MIDI devices not just for sound but hardware control in a browser as well. This talk is engaging and fun but is also pretty technical and won't leave the audience disappointed :)
 
-## Videos
-
-There are recordings of the talk
-
-- [from JSConfEU]()
-- [from JSConfAU]()
 
 ## Slides
 
 I don't upload my slides due to some problems I've had with copyright infringement.
+
+However there is a super early [version of this talk here](https://av-artist-talk.herokuapp.com/#/)
 
 You can find all the slides within the talk in the [index file]() within this build. It's just an HTML file so pretty easy to navigate - all my slide notes are there as well, within the markup.
 

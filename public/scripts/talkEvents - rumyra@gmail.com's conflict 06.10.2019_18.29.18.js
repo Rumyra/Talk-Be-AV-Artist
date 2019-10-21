@@ -140,9 +140,7 @@ Reveal.addEventListener( 'vis_vjing', function(ev) {
   screen.style.display = 'block';
   currentAnimation = ev.type;
 
-  screen.innerHTML = '<div id="two-screens"><section class="vis-spectrum"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></section><section class="vis-speakers"><img src="images/neon.svg" style="width:100%;height:auto;" /></section></div>';
-
-
+  screen.innerHTML = '<div id="two-screens"><section class="vis-spectrum"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></section><section class="vis-speakers"><img src="images/futuresync.png" style="width:100%;height:auto;" /></section></div>';
   var allElsOne = document.querySelectorAll('.vis-spectrum i');
   var totalElsOne = allElsOne.length;
   // var allElsTwo = document.querySelectorAll('.vis-speakers div');
@@ -338,7 +336,7 @@ Reveal.addEventListener( 'vis_sunburst', function(ev) {
     arcs
       .attr("d", arc)
       .style("stroke", function(d,i) { return 'hsla('+i*10+',60%,'+Math.floor(d/1.5)+'%,1)'; })
-      .style("fill", function(d,i) { return 'hsla('+i*10+',60%,'+Math.floor(d/2.5)+'%,'+d/100+')'; })
+      .style("fill", function(d,i) { return 'hsla('+i*10+',60%,'+Math.floor(d/2.5)+'%,'+d/155+')'; })
       .exit().remove();
   }
 }, false);
@@ -479,11 +477,11 @@ Reveal.addEventListener( 'vis_diagonalCirc', function(ev) {
     })
     .attr("cx", function(d, i) {
       // return Math.round( (window.innerWidth/2) + (i*Math.random) );
-      return 100*i;
+      return 90*i;
     });
 
   shape
-    .attr("r", function(d, i) { return Math.round(Math.pow(d,1.3)+20); })
+    .attr("r", function(d, i) { return Math.round(Math.pow(d,1.3)); })
     .attr("fill", function (d, i) { return "hsla(" + Math.round(i * (20 + (d / 255))) + ",50%,80%,0.5)" })
     .attr("stroke", function(d,i) {return "hsla("+Math.round( i*(20+(d/255)) )+",50%,80%,1)"} )
     .exit().remove();
@@ -518,8 +516,8 @@ Reveal.addEventListener( 'vis_concentric', function(ev) {
 
   shape
     .attr("d", conArc)
-    .style("stroke", function (d, i) { return 'hsla(' + 100 + (i * 20) + ',60%,60%,' + ((d / 100)+0.5) + ')'; })
-    .style("fill", function(d,i) { return 'hsla('+100+(i*20)+',60%,60%,'+((d/50)+0.3)+')'; })
+    .style("stroke", function (d, i) { return 'hsla(' + 100 + (i * 20) + ',60%,60%,' + d / 50 + ')'; })
+    .style("fill", function(d,i) { return 'hsla('+100+(i*20)+',60%,60%,'+d/100+')'; })
     .exit().remove();
   }
 
@@ -814,7 +812,7 @@ Reveal.addEventListener('vis_canvas',
       for(var i=0;i<bigData.length;i++) {
         var d = bigData[i];
         // ctx.beginPath();
-        drawHex(ctx, d, (i%24)*80, (i%14)*80);
+        drawHex(ctx, d, (i%24)*80, (i%14)*50);
         ctx.strokeStyle = "hsla("+(i*3)+",60%,80%,1)";
         ctx.fillStyle = "hsla("+(i*3)+",60%,"+d/2+"%,0.4)";
         // ctx.arc(x, y, d/(j*5), 0, Math.PI*2);
